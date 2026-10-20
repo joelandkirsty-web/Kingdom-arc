@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Kingdom Arc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap">
+<style>
+:root { --navy: #1D2B53; --muted: #5A5470; --cream: #FFF8EC; --sand: #EADFCB; --dash: #D9C9A8; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--cream); }
+body { font-family: Nunito, system-ui, sans-serif; color: var(--navy); }
+button { font: inherit; cursor: pointer; color: inherit; }
+button:disabled { cursor: default; opacity: .4; }
+button:focus-visible { outline: 4px solid #2F6FDB; outline-offset: 3px; }
+.fd { font-family: Fredoka, Nunito, sans-serif; }
+
+.app { min-height: 100vh; padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 18px; }
+
+/* Header */
+header { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
+.brand { display: flex; align-items: center; gap: 14px; margin-right: auto; }
+.logo { width: 60px; height: 60px; border-radius: 18px; background: #D7322C; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 0 #8E1E19; transform: rotate(-6deg); }
+h1 { margin: 0; font-weight: 700; font-size: 34px; line-height: 1; }
+.tag { font-weight: 700; font-size: 16px; color: var(--muted); margin-top: 4px; }
+.years { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { min-height: 44px; padding: 6px 16px; border-radius: 999px; border: 3px solid; font-weight: 600; font-size: 18px; }
+.weekbox { display: flex; align-items: center; gap: 10px; background: #fff; border: 3px solid var(--sand); border-radius: 22px; padding: 6px 8px; box-shadow: 0 3px 0 var(--sand); }
+.round { width: 44px; height: 44px; border-radius: 50%; border: 0; background: #FFF1CC; display: flex; align-items: center; justify-content: center; }
+.weekmid { display: flex; flex-direction: column; align-items: center; gap: 5px; min-width: 190px; }
+.weeklabel { font-weight: 600; font-size: 20px; line-height: 1; }
+.dots { display: flex; gap: 5px; align-items: center; }
+.dot { display: block; border-radius: 50%; border: 2px solid; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { min-height: 52px; padding: 8px 20px; border-radius: 16px; display: flex; align-items: center; gap: 8px; font-family: Fredoka, Nunito, sans-serif; }
+.btn-outline { border: 3px solid var(--navy); background: #fff; font-weight: 600; font-size: 19px; box-shadow: 0 4px 0 var(--navy); }
+.btn-red { border: 0; background: #C8302A; color: #fff; font-weight: 700; font-size: 21px; padding: 8px 24px; box-shadow: 0 5px 0 #8E1E19; }
+.btn-navy { border: 0; background: var(--navy); color: #fff; font-weight: 700; font-size: 23px; box-shadow: 0 5px 0 #0B1430; }
+.placed { background: #DCEFD9; color: #1F5E2A; font-weight: 600; font-size: 19px; padding: 8px 22px; border-radius: 16px; min-height: 52px; display: flex; align-items: center; gap: 8px; }
+
+/* Strip */
+.scroll { flex: 1; overflow-x: auto; padding-bottom: 6px; }
+.inner { min-width: 1200px; height: 100%; display: flex; flex-direction: column; gap: 12px; }
+.grid8 { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 12px; }
+.ribbon { display: flex; align-items: center; gap: 10px; background: #fff; border: 3px dashed var(--dash); border-radius: 999px; padding: 6px 18px; font-weight: 600; font-size: 18px; }
+.ribbon span { color: #fff; border-radius: 999px; padding: 2px 12px; font-size: 15px; }
+.stages { position: relative; flex: 1; min-height: 560px; }
+.trail { position: absolute; left: 5%; right: 5%; top: 52px; border-top: 6px dashed #E5D3AE; z-index: 0; }
+.stage { position: relative; z-index: 1; display: flex; flex-direction: column; min-width: 0; }
+.medal-wrap { display: flex; justify-content: center; height: 104px; align-items: flex-start; }
+.medal { position: relative; width: 96px; height: 96px; border-radius: 50%; border: 5px solid #fff; display: flex; align-items: center; justify-content: center; }
+.num { position: absolute; top: -6px; right: -10px; width: 34px; height: 34px; border-radius: 50%; background: #fff; color: var(--navy); border: 3px solid; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; }
+.panel { flex: 1; display: flex; flex-direction: column; gap: 10px; border-radius: 22px; padding: 14px 10px 12px; border: 3px solid; }
+.panel-head { text-align: center; padding-bottom: 4px; }
+h2 { margin: 0; font-weight: 700; font-size: 25px; line-height: 1.05; }
+.kid { font-weight: 800; font-size: 15px; line-height: 1.25; margin-top: 4px; }
+.span { font-weight: 700; font-size: 13px; color: var(--muted); margin-top: 3px; }
+.empty { border: 3px dashed; border-radius: 16px; padding: 14px 8px; text-align: center; font-weight: 700; font-size: 13px; color: var(--muted); }
+
+.chip { position: relative; display: flex; align-items: center; gap: 9px; width: 100%; text-align: left; border: 3px solid; border-radius: 16px; padding: 8px 10px; color: var(--navy); transition: transform .15s ease; }
+.chip:hover { transform: translateY(-2px) rotate(-.8deg); }
+.chip.lit { outline: 4px solid var(--navy); outline-offset: 3px; transform: scale(1.05); }
+.badge { flex: none; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+.chip-text { min-width: 0; display: flex; flex-direction: column; }
+.chip-ref { font-weight: 600; font-size: 17px; line-height: 1.15; }
+.chip-title { font-weight: 700; font-size: 13px; line-height: 1.25; color: #4E4866; }
+
+footer { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; font-weight: 700; font-size: 15px; }
+.legend-item { display: flex; align-items: center; gap: 7px; }
+.legend-dot { width: 18px; height: 18px; border-radius: 50%; }
+
+/* Big card */
+.scrim { position: fixed; inset: 0; z-index: 10; background: rgba(29,43,83,.6); display: flex; align-items: center; justify-content: center; padding: 20px; }
+.big { width: 100%; max-width: 920px; max-height: 92vh; overflow: auto; background: #fff; border-radius: 32px; border: 6px solid; }
+.big-top { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; padding: 18px 28px; }
+.big-icon { width: 68px; height: 68px; border-radius: 50%; border: 4px solid; display: flex; align-items: center; justify-content: center; }
+.big-stage { font-weight: 600; font-size: 20px; line-height: 1.1; }
+.big-kid { font-weight: 800; font-size: 19px; margin-top: 2px; }
+.big-when { border: 3px solid #fff; border-radius: 999px; padding: 6px 16px; font-weight: 600; font-size: 18px; }
+.big-body { padding: 30px 40px 34px; display: flex; flex-direction: column; gap: 10px; }
+.big-ref { font-weight: 700; font-size: 60px; line-height: 1.02; }
+.big-title { font-weight: 800; font-size: 26px; color: #4E4866; }
+.quote { position: relative; margin-top: 14px; border-radius: 24px; padding: 26px 30px 26px 74px; }
+.quote svg { position: absolute; left: 20px; top: 20px; }
+.quote p { margin: 0; font-weight: 700; font-size: 34px; line-height: 1.35; text-wrap: pretty; }
+.notext { margin-top: 14px; display: flex; align-items: center; gap: 18px; border: 4px dashed; border-radius: 24px; padding: 22px 26px; }
+.notext p { margin: 0; font-weight: 800; font-size: 28px; line-height: 1.3; }
+.big-acts { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.big-acts .btn { min-height: 60px; padding: 10px 28px; border-radius: 18px; }
+.big-acts .btn-red { font-size: 23px; }
+.big-acts .btn-outline { font-size: 21px; padding: 10px 24px; margin-left: auto; }
+.progress { align-self: center; font-weight: 800; font-size: 18px; color: var(--muted); }
+
+/* Motion */
+.pop { animation: pop .75s cubic-bezier(.2,1.6,.4,1); }
+@keyframes pop { 0% { transform: scale(.2) rotate(-10deg); opacity: 0 } 100% { transform: none; opacity: 1 } }
+.spark { position: absolute; pointer-events: none; opacity: 0; }
+.s1 { top: -10px; left: -8px; animation: s1 1.2s ease-out .2s; }
+.s2 { top: -14px; right: 10px; animation: s2 1.2s ease-out .3s; }
+.s3 { bottom: -10px; right: -6px; animation: s3 1.2s ease-out .25s; }
+@keyframes s1 { 0% { opacity: 1; transform: scale(.4) } 100% { opacity: 0; transform: translate(-18px,-22px) scale(1.2) rotate(40deg) } }
+@keyframes s2 { 0% { opacity: 1; transform: scale(.4) } 100% { opacity: 0; transform: translate(10px,-28px) scale(1.1) rotate(-30deg) } }
+@keyframes s3 { 0% { opacity: 1; transform: scale(.4) } 100% { opacity: 0; transform: translate(20px,16px) scale(1.2) rotate(60deg) } }
+.rise { animation: rise .4s cubic-bezier(.2,.9,.3,1.25); }
+@keyframes rise { 0% { transform: translateY(40px) scale(.9); opacity: 0 } 100% { transform: none; opacity: 1 } }
+.bob { animation: bob 3.2s ease-in-out infinite; }
+@keyframes bob { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-6px) } }
+.glow { animation: glow 1.8s ease-in-out infinite; }
+@keyframes glow { 0%,100% { box-shadow: 0 5px 0 #8E1E19, 0 0 0 0 rgba(215,50,44,.45) } 50% { box-shadow: 0 5px 0 #8E1E19, 0 0 0 10px rgba(215,50,44,0) } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+var STAGES = [
+  { n: 1, name: "Pattern",    kid: "God’s good world",          span: "Genesis 1–2",       color: "#2A7F39", tint: "#E3F3E2", edge: "#BFE0BC", shadow: "#17521F", ink: "#FFFFFF" },
+  { n: 2, name: "Perished",   kid: "Everything broke",          span: "Genesis 3–11",      color: "#6A5A8C", tint: "#ECE7F4", edge: "#D3C9E6", shadow: "#3F3459", ink: "#FFFFFF" },
+  { n: 3, name: "Promised",   kid: "God makes a promise",       span: "Abraham",           color: "#F2B200", tint: "#FFF1CC", edge: "#F6DC8E", shadow: "#A47700", ink: "#1D2B53" },
+  { n: 4, name: "Partial",    kid: "God’s people, God’s place", span: "Exodus to Solomon", color: "#C95A12", tint: "#FDE5D3", edge: "#F5C6A2", shadow: "#82390A", ink: "#FFFFFF" },
+  { n: 5, name: "Prophesied", kid: "Waiting for the King",      span: "Prophets, exile",   color: "#13848A", tint: "#D9F0F0", edge: "#A9DADB", shadow: "#0B5357", ink: "#FFFFFF" },
+  { n: 6, name: "Present",    kid: "Jesus is here!",            span: "Gospels",           color: "#D7322C", tint: "#FBDCDA", edge: "#F2AEAA", shadow: "#8E1E19", ink: "#FFFFFF" },
+  { n: 7, name: "Proclaimed", kid: "The good news spreads",     span: "Acts, Epistles",    color: "#2F6FDB", tint: "#DDE8FB", edge: "#B4CCF3", shadow: "#1B4594", ink: "#FFFFFF" },
+  { n: 8, name: "Perfected",  kid: "Home with God forever",     span: "Revelation 21–22",  color: "#2A7F39", tint: "#E3F3E2", edge: "#BFE0BC", shadow: "#17521F", ink: "#FFFFFF" }
+];
+var YEARS = [
+  { name: "Prep",   short: "P",  color: "#F5B700", ink: "#3A2A00", shadow: "#A47A00" },
+  { name: "Year 1", short: "Y1", color: "#D2461C", ink: "#FFFFFF", shadow: "#8A2C10" },
+  { name: "Year 2", short: "Y2", color: "#2E7D32", ink: "#FFFFFF", shadow: "#1B4E1E" },
+  { name: "Year 3", short: "Y3", color: "#1F5FBF", ink: "#FFFFFF", shadow: "#123B78" },
+  { name: "Year 4", short: "Y4", color: "#6E3FB0", ink: "#FFFFFF", shadow: "#44266E" },
+  { name: "Year 5", short: "Y5", color: "#B5266B", ink: "#FFFFFF", shadow: "#721742" }
+];
+var CARDS = [{"yr":0,"t":1,"w":1,"title":"Before anything","ref":"Genesis 1:1","stage":1,"text":"In the beginning God created the heavens and the earth."},{"yr":0,"t":1,"w":2,"title":"Sky, sea and land","ref":"Genesis 1:10","stage":1,"text":null},{"yr":0,"t":1,"w":3,"title":"Lights in the sky","ref":"Genesis 1:16","stage":1,"text":null},{"yr":0,"t":1,"w":4,"title":"Full of life","ref":"Genesis 1:21","stage":1,"text":null},{"yr":0,"t":1,"w":5,"title":"People, like God","ref":"Genesis 1:27","stage":1,"text":"So God created human beings in his own image. In the image of God he created them; male and female he created them."},{"yr":0,"t":1,"w":6,"title":"A garden to look after","ref":"Genesis 2:15","stage":1,"text":"The LORD God placed the man in the Garden of Eden to tend and watch over it."},{"yr":0,"t":1,"w":7,"title":"Very good, and rest","ref":"Genesis 1:31","stage":1,"text":"Then God looked over all he had made, and he saw that it was very good!"},{"yr":0,"t":1,"w":8,"title":"The snake’s question","ref":"Genesis 3:6","stage":2,"text":null},{"yr":0,"t":1,"w":9,"title":"Hiding, and outside the garden","ref":"Genesis 3:23","stage":2,"text":"So the LORD God banished them from the Garden of Eden."},{"yr":0,"t":1,"w":10,"title":"The story keeps going","ref":"Luke 24:6","stage":6,"text":"He isn’t here! He is risen from the dead!"},{"yr":1,"t":1,"w":1,"title":"God is the maker","ref":"Genesis 1:2","stage":1,"text":"The earth was formless and empty, and darkness covered the deep waters. And the Spirit of God was hovering over the surface of the waters."},{"yr":1,"t":1,"w":2,"title":"God speaks","ref":"Genesis 1:3","stage":1,"text":"Then God said, “Let there be light,” and there was light."},{"yr":1,"t":1,"w":3,"title":"God is king","ref":"Isaiah 6:1","stage":5,"text":"It was in the year King Uzziah died that I saw the Lord. He was sitting on a lofty throne, and the train of his robe filled the Temple."},{"yr":1,"t":1,"w":4,"title":"God is holy","ref":"Isaiah 6:3","stage":5,"text":"Holy, holy, holy is the LORD of Heaven’s Armies! The whole earth is filled with his glory!"},{"yr":1,"t":1,"w":5,"title":"God is good and faithful","ref":"Psalm 100:5","stage":4,"text":"For the LORD is good. His unfailing love continues forever, and his faithfulness continues to each generation."},{"yr":1,"t":1,"w":6,"title":"God is love","ref":"1 John 4:9","stage":7,"text":"God showed how much he loved us by sending his one and only Son into the world so that we might have eternal life through him."},{"yr":1,"t":1,"w":7,"title":"Father, Son and Spirit","ref":"Matthew 3:17","stage":6,"text":"And a voice from heaven said, “This is my dearly loved Son, who brings me great joy.”"},{"yr":1,"t":1,"w":8,"title":"Never alone","ref":"John 1:1","stage":6,"text":"In the beginning the Word already existed. The Word was with God, and the Word was God."},{"yr":1,"t":1,"w":9,"title":"Our Father","ref":"Matthew 6:9","stage":6,"text":"Pray like this: Our Father in heaven, may your name be kept holy."},{"yr":1,"t":1,"w":10,"title":"God’s love at Easter","ref":"1 John 4:10","stage":7,"text":"He loved us and sent his Son as a sacrifice to take away our sins."},{"yr":2,"t":1,"w":1,"title":"Slaves in Egypt","ref":"Exodus 1:13","stage":4,"text":null},{"yr":2,"t":1,"w":2,"title":"A baby in a basket","ref":"Exodus 2:10","stage":4,"text":null},{"yr":2,"t":1,"w":3,"title":"God hears","ref":"Exodus 2:24","stage":4,"text":"God heard their groaning, and he remembered his covenant promise to Abraham, Isaac, and Jacob."},{"yr":2,"t":1,"w":4,"title":"The burning bush","ref":"Exodus 3:8","stage":4,"text":"So I have come down to rescue them from the power of the Egyptians."},{"yr":2,"t":1,"w":5,"title":"“Let my people go”","ref":"Exodus 5:1","stage":4,"text":"This is what the LORD, the God of Israel, says: Let my people go."},{"yr":2,"t":1,"w":6,"title":"The plagues","ref":"Exodus 10:23","stage":4,"text":null},{"yr":2,"t":1,"w":7,"title":"The lamb","ref":"Exodus 12:13","stage":4,"text":"When I see the blood, I will pass over you."},{"yr":2,"t":1,"w":8,"title":"The night they left","ref":"Exodus 12:31","stage":4,"text":null},{"yr":2,"t":1,"w":9,"title":"The sea opens","ref":"Exodus 14:30","stage":4,"text":"That is how the LORD rescued Israel from the hand of the Egyptians that day."},{"yr":2,"t":1,"w":10,"title":"The Lamb of God","ref":"John 1:29","stage":6,"text":"Look! The Lamb of God who takes away the sin of the world!"},{"yr":3,"t":1,"w":1,"title":"The first promise","ref":"Genesis 3:15","stage":2,"text":"He will strike your head, and you will strike his heel."},{"yr":3,"t":1,"w":2,"title":"Go","ref":"Genesis 12:3","stage":3,"text":"All the families on earth will be blessed through you."},{"yr":3,"t":1,"w":3,"title":"The journey","ref":"Genesis 12:7","stage":3,"text":"Then the LORD appeared to Abram and said, “I will give this land to your descendants.”"},{"yr":3,"t":1,"w":4,"title":"Count the stars","ref":"Genesis 15:6","stage":3,"text":"And Abram believed the LORD, and the LORD counted him as righteous because of his faith."},{"yr":3,"t":1,"w":5,"title":"New names","ref":"Genesis 17:5","stage":3,"text":"I am changing your name. It will no longer be Abram. Instead, you will be called Abraham, for you will be the father of many nations."},{"yr":3,"t":1,"w":6,"title":"Is anything too hard?","ref":"Genesis 18:14","stage":3,"text":"Is anything too hard for the LORD?"},{"yr":3,"t":1,"w":7,"title":"Laughter","ref":"Genesis 21:1","stage":3,"text":"The LORD kept his word and did for Sarah exactly what he had promised."},{"yr":3,"t":1,"w":8,"title":"The hardest test","ref":"Genesis 22:8","stage":3,"text":"“God will provide a sheep for the burnt offering, my son,” Abraham answered."},{"yr":3,"t":1,"w":9,"title":"God provides","ref":"Genesis 22:14","stage":3,"text":"Abraham named the place Yahweh-Yireh (which means “the LORD will provide”)."},{"yr":3,"t":1,"w":10,"title":"God gave his own Son","ref":"Romans 8:32","stage":7,"text":"Since he did not spare even his own Son but gave him up for us all, won’t he also give us everything else?"},{"yr":4,"t":1,"w":1,"title":"Carried on eagles’ wings","ref":"Exodus 19:4","stage":4,"text":"You know how I carried you on eagles’ wings and brought you to myself."},{"yr":4,"t":1,"w":2,"title":"The mountain shakes","ref":"Exodus 19:18","stage":4,"text":"All of Mount Sinai was covered with smoke because the LORD had descended on it in the form of fire."},{"yr":4,"t":1,"w":3,"title":"Ten words","ref":"Exodus 20:2–3","stage":4,"text":"I am the LORD your God, who rescued you from the land of Egypt, the place of your slavery. You must not have any other god but me."},{"yr":4,"t":1,"w":4,"title":"The golden calf","ref":"Exodus 32:4","stage":4,"text":null},{"yr":4,"t":1,"w":5,"title":"“Go with us”","ref":"Exodus 33:14","stage":4,"text":"I will personally go with you."},{"yr":4,"t":1,"w":6,"title":"Make me a home","ref":"Exodus 25:8","stage":4,"text":"Have the people of Israel build me a holy sanctuary so I can live among them."},{"yr":4,"t":1,"w":7,"title":"Inside the tent","ref":"Exodus 25:22","stage":4,"text":"I will meet with you there and talk to you from above the atonement cover."},{"yr":4,"t":1,"w":8,"title":"The glory comes","ref":"Exodus 40:34","stage":4,"text":"Then the cloud covered the Tabernacle, and the glory of the LORD filled the Tabernacle."},{"yr":4,"t":1,"w":9,"title":"Following the cloud","ref":"Exodus 40:38","stage":4,"text":null},{"yr":4,"t":1,"w":10,"title":"The curtain torn","ref":"Matthew 27:51","stage":6,"text":"At that moment the curtain in the sanctuary of the Temple was torn in two, from top to bottom."},{"yr":5,"t":1,"w":1,"title":"Round and round","ref":"Judges 2:16","stage":4,"text":"Then the LORD raised up judges to rescue the Israelites from their attackers."},{"yr":5,"t":1,"w":2,"title":"Gideon, the mighty hero","ref":"Judges 6:12","stage":4,"text":"The angel of the LORD appeared to him and said, “Mighty hero, the LORD is with you!”"},{"yr":5,"t":1,"w":3,"title":"Three hundred","ref":"Judges 8:33","stage":4,"text":null},{"yr":5,"t":1,"w":4,"title":"Samson","ref":"Judges 16:28","stage":4,"text":"Sovereign LORD, remember me again. O God, please strengthen me just one more time."},{"yr":5,"t":1,"w":5,"title":"Ruth","ref":"Ruth 4:17","stage":4,"text":"And they named him Obed. He became the father of Jesse and the grandfather of David."},{"yr":5,"t":1,"w":6,"title":"Samuel","ref":"1 Samuel 3:10","stage":4,"text":"And the LORD came and called as before, “Samuel! Samuel!” And Samuel replied, “Speak, your servant is listening.”"},{"yr":5,"t":1,"w":7,"title":"“Give us a king”","ref":"1 Samuel 8:7","stage":4,"text":"They are rejecting me, not you. They don’t want me to be their king any longer."},{"yr":5,"t":1,"w":8,"title":"Saul","ref":"1 Samuel 15:22","stage":4,"text":"Obedience is better than sacrifice."},{"yr":5,"t":1,"w":9,"title":"The wise king who ended badly","ref":"1 Kings 11:4","stage":4,"text":"In Solomon’s old age, they turned his heart to worship other gods instead of being completely faithful to the LORD his God."},{"yr":5,"t":1,"w":10,"title":"The rescuer who lasts","ref":"Romans 6:9","stage":7,"text":"We are sure of this because Christ was raised from the dead, and he will never die again. Death no longer has any power over him."}];
+CARDS.forEach(function (c, i) { c.id = i; });
+
+// Stroke icons, one per stage
+var ICONS = {
+  1: '<circle cx="12" cy="9" r="6"/><path d="M12 15v6M8 21h8M10 9l2 2 2-3"/>',
+  2: '<path d="M12 20s-8-4.6-8-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8 2.8C20 15.4 12 20 12 20z"/><path d="M12 7l-1.6 4 3 2.2-1.4 3.6"/>',
+  3: '<path d="M10 4l2 4.2 4.6.5-3.4 3 1 4.6L10 14l-4.2 2.3 1-4.6-3.4-3 4.6-.5z"/><path d="M19 3v4M17 5h4M19 15v4M17 17h4"/>',
+  4: '<path d="M2 20L12 5l10 15z"/><path d="M9 20l3-6 3 6M12 5V2l3 1.5L12 5"/>',
+  5: '<path d="M8 4h11a2 2 0 0 1 2 2v2h-4"/><path d="M17 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1h11"/><path d="M8 4a2 2 0 0 0-2 2v11"/><path d="M10 9h4M10 13h4"/>',
+  6: '<path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z"/><path d="M5 22h14"/>',
+  7: '<path d="M3 10v4h4l8 5V5l-8 5z"/><path d="M18.5 8.5a5 5 0 0 1 0 7M7 14l1 6h3l-1-5"/>',
+  8: '<path d="M3 21V10l9-6 9 6v11z"/><path d="M9 21v-6a3 3 0 0 1 6 0v6"/><circle cx="12" cy="9.5" r="1"/>'
+};
+function svg(inner, size, extra) {
+  return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="' + (extra || 2.2) + '" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + inner + '</svg>';
+}
+var STAR = '<path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/>';
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, function (ch) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]; });
+}
+
+var STORE = "kingdom-arc-kids";
+var state = { yr: 0, wk: 1, placed: null, open: null, isNew: false, lb: null, just: null };
+try {
+  var saved = JSON.parse(localStorage.getItem(STORE) || "null");
+  if (saved && YEARS[saved.yr] && saved.wk >= 1 && saved.wk <= 10) { state.yr = saved.yr; state.wk = saved.wk; }
+} catch (e) {}
+function save() { try { localStorage.setItem(STORE, JSON.stringify({ yr: state.yr, wk: state.wk })); } catch (e) {} }
+
+function key() { return state.yr + "-" + state.wk; }
+function isPlaced() { return state.placed === key(); }
+function thisCard() { return CARDS.find(function (c) { return c.yr === state.yr && c.w === state.wk; }); }
+function visible() {
+  var yr = state.yr, wk = state.wk, p = isPlaced();
+  return CARDS.filter(function (c) { return c.yr < yr || (c.yr === yr && (c.w < wk || (c.w === wk && p))); });
+}
+
+function render() {
+  var yr = state.yr, wk = state.wk, placed = isPlaced(), tc = thisCard();
+  var vis = visible();
+  var litId = state.lb ? state.lb.list[state.lb.i] : null;
+  var h = [];
+
+  // Header
+  h.push('<div class="app"><header><div class="brand"><div class="logo">' + '<span style="color:#fff;display:flex">' + svg('<path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z"/>', 36) + '</span>' + '</div><div><h1 class="fd">The Kingdom Arc</h1><div class="tag">8 steps through God’s big story</div></div></div>');
+
+  h.push('<div class="years" role="group" aria-label="Class year">');
+  YEARS.forEach(function (y, i) {
+    var on = i === yr;
+    h.push('<button type="button" class="pill fd" data-act="year" data-v="' + i + '" aria-pressed="' + on + '" style="border-color:' + y.color + ';background:' + (on ? y.color : "#fff") + ';color:' + (on ? y.ink : "#1D2B53") + ';box-shadow:0 3px 0 ' + (on ? y.shadow : "#EADFCB") + '">' + y.name + '</button>');
+  });
+  h.push('</div>');
+
+  var yc = YEARS[yr].color, dots = "";
+  for (var w = 1; w <= 10; w++) {
+    var done = w < wk || (w === wk && placed), sz = w === wk ? 16 : 11;
+    dots += '<span class="dot" style="width:' + sz + 'px;height:' + sz + 'px;background:' + (done ? yc : "#fff") + ';border-color:' + (done || w === wk ? yc : "#D9C9A8") + '"></span>';
+  }
+  h.push('<div class="weekbox"><button type="button" class="round" data-act="prev" aria-label="Previous week"' + (wk <= 1 ? " disabled" : "") + '>' + svg('<path d="M15 5l-7 7 7 7"/>', 22, 3) + '</button>' +
+    '<div class="weekmid"><div class="weeklabel fd">Term 1 · Week ' + wk + '</div><div class="dots" aria-hidden="true">' + dots + '</div></div>' +
+    '<button type="button" class="round" data-act="next" aria-label="Next week"' + (wk >= 10 ? " disabled" : "") + '>' + svg('<path d="M9 5l7 7-7 7"/>', 22, 3) + '</button></div>');
+
+  h.push('<div class="actions"><button type="button" class="btn btn-outline" data-act="look">' + svg('<path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/>', 22, 2.6) + 'Look back</button>');
+  if (tc && !placed) h.push('<button type="button" class="btn btn-red glow" data-act="reveal">' + svg(STAR, 24, 2.4) + 'This week’s card!</button>');
+  if (placed) h.push('<div class="placed fd">' + svg('<path d="M4 12l5 5L20 6"/>', 22, 3) + 'On the path!</div>');
+  h.push('</div></header>');
+
+  // Strip
+  h.push('<div class="scroll"><div class="inner"><div class="grid8">' +
+    '<div class="ribbon fd" style="grid-column:1 / span 5"><span style="background:#6A5A8C">Old Testament</span>God makes a big promise</div>' +
+    '<div class="ribbon fd" style="grid-column:6 / span 3"><span style="background:#2F6FDB">New Testament</span>Jesus keeps it!</div></div>' +
+    '<div class="grid8 stages"><div class="trail" aria-hidden="true"></div>');
+
+  STAGES.forEach(function (s) {
+    var cards = vis.filter(function (c) { return c.stage === s.n; });
+    h.push('<section class="stage" aria-label="Stage ' + s.n + ', ' + s.name + '"><div class="medal-wrap"><div class="medal' + (s.n === 7 ? " bob" : "") + '" style="background:' + s.color + ';color:' + s.ink + ';box-shadow:0 5px 0 ' + s.shadow + (s.n === 7 ? ",0 0 0 10px rgba(47,111,219,.22)" : "") + '">' +
+      svg(ICONS[s.n], s.n === 6 ? 50 : 46) + '<span class="num fd" style="border-color:' + s.color + '">' + s.n + '</span></div></div>' +
+      '<div class="panel" style="background:' + s.tint + ';border-color:' + s.edge + '"><div class="panel-head"><h2 class="fd">' + s.name + '</h2><div class="kid">' + s.kid + '</div><div class="span">' + s.span + '</div></div>');
+    cards.forEach(function (c) {
+      var y = YEARS[c.yr], earlier = c.yr < yr, just = state.just === c.id;
+      h.push('<button type="button" class="chip' + (litId === c.id ? " lit" : "") + (just ? " pop" : "") + '" data-act="open" data-v="' + c.id + '" style="background:' + (earlier ? "#FFFDF7" : "#fff") + ';border-style:' + (earlier ? "dashed" : "solid") + ';border-color:' + y.color + ';box-shadow:0 3px 0 ' + (earlier ? "#EADFCB" : y.shadow) + '">' +
+        '<span class="badge fd" style="background:' + y.color + ';color:' + y.ink + '">' + y.short + '</span>' +
+        '<span class="chip-text"><span class="chip-ref fd">' + esc(c.ref) + '</span><span class="chip-title">' + esc(c.title) + '</span></span>' +
+        (just ? '<svg class="spark s1" width="22" height="22" viewBox="0 0 24 24" fill="#F5B700" aria-hidden="true">' + STAR + '</svg><svg class="spark s2" width="18" height="18" viewBox="0 0 24 24" fill="#D7322C" aria-hidden="true">' + STAR + '</svg><svg class="spark s3" width="20" height="20" viewBox="0 0 24 24" fill="#2F6FDB" aria-hidden="true">' + STAR + '</svg>' : '') +
+        '</button>');
+    });
+    if (!cards.length) h.push('<div class="empty" style="border-color:' + s.edge + '">Cards will land here</div>');
+    h.push('</div></section>');
+  });
+  h.push('</div></div></div>');
+
+  // Legend
+  h.push('<footer><span style="color:#5A5470">Card colours:</span>');
+  for (var i = 0; i <= yr; i++) h.push('<span class="legend-item"><span class="legend-dot" style="background:' + YEARS[i].color + '"></span>' + YEARS[i].name + (i === yr ? " (this year)" : "") + '</span>');
+  h.push('<span style="margin-left:auto;color:#5A5470">Tap a card to read it · Space: next · ← →: week</span></footer>');
+
+  // Big card
+  if (state.open !== null && CARDS[state.open]) {
+    var c = CARDS[state.open], s = STAGES[c.stage - 1], y = YEARS[c.yr];
+    h.push('<div class="scrim" data-act="scrim"><div class="big rise" role="dialog" aria-modal="true" aria-label="' + esc(c.ref) + '" style="border-color:' + s.color + ';box-shadow:0 12px 0 ' + s.shadow + '">' +
+      '<div class="big-top" style="background:' + s.color + ';color:' + s.ink + '"><div class="big-icon" style="border-color:' + s.ink + '">' + svg(ICONS[s.n], s.n === 6 ? 38 : 36) + '</div>' +
+      '<div style="margin-right:auto"><div class="big-stage fd">Stage ' + s.n + ' · ' + s.name + '</div><div class="big-kid">' + s.kid + '</div></div>' +
+      '<div class="big-when fd" style="background:' + y.color + ';color:' + y.ink + '">' + y.name + ' · Week ' + c.w + '</div></div>' +
+      '<div class="big-body"><div class="big-ref fd">' + esc(c.ref) + '</div><div class="big-title">' + esc(c.title) + '</div>');
+    if (c.text) {
+      h.push('<div class="quote" style="background:' + s.tint + '"><svg width="44" height="44" viewBox="0 0 24 24" fill="' + s.color + '" aria-hidden="true"><path d="M4 18v-5c0-4 2-7 6-8l1 2c-2 1-3 2.5-3 4h3v7zM13 18v-5c0-4 2-7 6-8l1 2c-2 1-3 2.5-3 4h3v7z"/></svg><p>' + esc(c.text) + '</p></div>');
+    } else {
+      h.push('<div class="notext" style="border-color:' + s.edge + ';color:#1D2B53"><svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="' + s.color + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5c3-1.5 7-1.5 10 1 3-2.5 7-2.5 10-1v14c-3-1.5-7-1.5-10 1-3-2.5-7-2.5-10-1z"/><path d="M12 6v14"/></svg><p>Let’s read this one together from the class Bible!</p></div>');
+    }
+    h.push('<div class="big-acts">');
+    if (state.isNew) h.push('<button type="button" class="btn btn-red" data-act="place">' + svg('<path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>', 26, 2.6) + 'Put it on ' + s.name + '</button>');
+    if (state.lb) h.push('<button type="button" class="btn btn-navy" data-act="lookNext">Next card ' + svg('<path d="M5 12h14M13 6l6 6-6 6"/>', 24, 3) + '</button><div class="progress">' + (state.lb.i + 1) + ' of ' + state.lb.list.length + '</div>');
+    h.push('<button type="button" class="btn btn-outline" data-act="close">' + (state.lb ? "Stop" : state.isNew ? "Not yet" : "Close") + '</button></div></div></div></div>');
+  }
+  h.push('</div>');
+
+  document.getElementById("app").innerHTML = h.join("");
+  var first = document.querySelector(".big-acts button");
+  if (first) first.focus();
+  if (litId !== null) {
+    var lit = document.querySelector('.chip[data-v="' + litId + '"]');
+    if (lit) lit.scrollIntoView({ block: "nearest", inline: "center" });
+  }
+}
+
+var justTimer;
+var actions = {
+  year: function (v) { state.yr = +v; state.placed = null; state.lb = null; state.open = null; state.just = null; save(); render(); },
+  prev: function () { setWeek(state.wk - 1); },
+  next: function () { setWeek(state.wk + 1); },
+  reveal: function () { var tc = thisCard(); if (tc && !isPlaced()) { state.open = tc.id; state.isNew = true; state.lb = null; render(); } },
+  open: function (v) { state.open = +v; state.isNew = false; state.lb = null; render(); },
+  place: function () {
+    if (!state.isNew || state.open === null) return;
+    state.just = state.open; state.placed = key(); state.open = null; state.isNew = false; render();
+    var el = document.querySelector('.chip[data-v="' + state.just + '"]');
+    if (el) el.scrollIntoView({ block: "nearest", inline: "center" });
+    clearTimeout(justTimer);
+    justTimer = setTimeout(function () { state.just = null; render(); }, 1800);
+  },
+  look: function () {
+    var list = visible().sort(function (a, b) { return a.yr - b.yr || a.t - b.t || a.w - b.w; }).map(function (c) { return c.id; });
+    if (!list.length) return;
+    state.lb = { list: list, i: 0 }; state.open = list[0]; state.isNew = false; render();
+  },
+  lookNext: function () {
+    var lb = state.lb; if (!lb) return;
+    if (lb.i + 1 >= lb.list.length) return actions.close();
+    lb.i++; state.open = lb.list[lb.i]; render();
+  },
+  close: function () { state.open = null; state.isNew = false; state.lb = null; render(); },
+  scrim: function () { actions.close(); }
+};
+function setWeek(w) {
+  state.wk = Math.min(10, Math.max(1, w)); state.placed = null; state.lb = null; state.open = null; state.just = null; save(); render();
+}
+
+document.addEventListener("click", function (e) {
+  var t = e.target.closest("[data-act]");
+  if (!t) return;
+  if (t.dataset.act === "scrim" && e.target !== t) return;
+  actions[t.dataset.act](t.dataset.v);
+});
+
+document.addEventListener("keydown", function (e) {
+  // A focused button already handles Space itself
+  if (e.key === " " && e.target.tagName === "BUTTON") return;
+  if (e.key === "Escape") { if (state.open !== null) actions.close(); return; }
+  if (state.open !== null) {
+    if (e.key === " " || e.key === "ArrowRight") {
+      e.preventDefault();
+      if (state.isNew) actions.place(); else if (state.lb) actions.lookNext(); else actions.close();
+    }
+    return;
+  }
+  if (e.key === " ") { e.preventDefault(); actions.reveal(); }
+  if (e.key === "ArrowRight") setWeek(state.wk + 1);
+  if (e.key === "ArrowLeft") setWeek(state.wk - 1);
+});
+
+render();
+</script>
+</body>
+</html>
