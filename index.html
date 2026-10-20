@@ -140,6 +140,14 @@ footer { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; fo
 .ph-btn-line { border: 3px solid; background: #fff; }
 .ph-btn-red { border: 0; background: #C8302A; color: #fff; font-weight: 700; box-shadow: 0 4px 0 #8E1E19; }
 .ph-btn-navy { border: 0; background: var(--navy); color: #fff; font-weight: 700; box-shadow: 0 4px 0 #0B1430; }
+.ph-link { text-decoration: none; color: var(--navy); }
+.big-acts .btn-read { text-decoration: none; color: var(--navy); margin-left: 0; }
+.tell { display: flex; flex-direction: column; gap: 10px; }
+.tell p { margin: 0; font-size: 17px; line-height: 1.45; }
+.tell .all { font-weight: 800; }
+.tell .all span { font-weight: 700; color: var(--muted); font-size: 14px; margin-right: 4px; }
+.tell .cue, .tell .pics { font-style: italic; color: var(--muted); font-size: 15px; }
+.tell .ask { border-top: 3px solid var(--sand); padding-top: 10px; }
 .ph-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
 .ph-row { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 58px; padding: 6px 10px 6px 8px; border-radius: 16px; background: #fff; border: 3px solid var(--sand); text-align: left; }
 .ph-num { flex: none; width: 36px; height: 36px; border-radius: 50%; border: 2px solid; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; }
@@ -185,6 +193,7 @@ footer { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; fo
 <body>
 <div id="app"></div>
 
+<script src="stories.js"></script>
 <script>
 var STAGES = [
   { n: 1, name: "Pattern",    kid: "God’s good world",          span: "Genesis 1–2",       color: "#2A7F39", tint: "#E3F3E2", edge: "#BFE0BC", shadow: "#17521F", ink: "#FFFFFF" },
@@ -329,11 +338,21 @@ function bigCardHtml() {
       h.push('<div class="notext" style="border-color:' + s.edge + ';color:#1D2B53"><svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="' + s.color + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5c3-1.5 7-1.5 10 1 3-2.5 7-2.5 10-1v14c-3-1.5-7-1.5-10 1-3-2.5-7-2.5-10-1z"/><path d="M12 6v14"/></svg><p>Let’s read this one together from the class Bible!</p></div>');
     }
     h.push('<div class="big-acts">');
+    var bst = story(c);
+    if (bst && !state.isNew) h.push(readLink(bst, "btn btn-outline btn-read"));
     if (state.isNew) h.push('<button type="button" class="btn btn-red" data-act="place">' + svg('<path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>', 26, 2.6) + 'Put it on ' + s.name + '</button>');
     if (state.lb) h.push('<button type="button" class="btn btn-navy" data-act="lookNext">Next card ' + svg('<path d="M5 12h14M13 6l6 6-6 6"/>', 24, 3) + '</button><div class="progress">' + (state.lb.i + 1) + ' of ' + state.lb.list.length + '</div>');
     h.push('<button type="button" class="btn btn-outline" data-act="close">' + (state.lb ? "Stop" : state.isNew ? "Not yet" : "Close") + '</button></div></div></div></div>');
   }
   return h.join("");
+}
+
+// ---------- Stories (stories.js) ----------
+function story(c) { return (typeof STORIES !== "undefined" && c) ? STORIES[c.yr + "-" + c.w] : null; }
+var BOOK = '<path d="M2 5c3-1.5 7-1.5 10 1 3-2.5 7-2.5 10-1v14c-3-1.5-7-1.5-10 1-3-2.5-7-2.5-10-1z"/><path d="M12 6v14"/>';
+var SPEAK = '<path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/>';
+function readLink(st, cls, style) {
+  return '<a class="' + cls + '" href="' + esc(st.url) + '" target="_blank" rel="noopener"' + (style ? ' style="' + style + '"' : '') + '>' + svg(BOOK, 20, 2.6) + 'Read the passage</a>';
 }
 
 // ---------- Phone (teacher) view ----------
@@ -375,6 +394,22 @@ function renderPhone() {
         '</span></button></li>');
     });
     h.push('</ol>');
+  } else if (state.view === "tell") {
+    var st = story(tc);
+    h.push(phBackHeader("Story to tell", st ? st.source : ""));
+    h.push('<section class="ph-box tell">');
+    if (!st) h.push('<p>No story for this week yet.</p>');
+    else {
+      if (st.gsb) h.push('<p class="pics">Show the pictures from The Gospel Story Bible, ' + esc(st.gsb) + ', as you tell.</p>');
+      st.tell.forEach(function (x) {
+        if (typeof x === "string") h.push('<p>' + esc(x) + '</p>');
+        else if (x.all) h.push('<p class="all"><span>All:</span>' + esc(x.all) + '</p>');
+        else if (x.cue) h.push('<p class="cue">' + esc(x.cue) + '</p>');
+      });
+      h.push('<div class="ask"><p><b>Ask.</b> ' + esc(st.ask) + '</p><p class="ph-sub" style="margin-top:4px">Listen for: ' + esc(st.listen) + '</p></div>');
+    }
+    h.push('</section>');
+    if (st) h.push(readLink(st, "ph-btn ph-btn-line ph-link", "border-color:#1D2B53;box-shadow:0 3px 0 #1D2B53"));
   } else if (state.view === "story") {
     var sn = state.storyStage || (tc ? tc.stage : 1), s = STAGES[sn - 1];
     var cards = CARDS.filter(function (c) { return c.stage === sn && (c.yr < yr || (c.yr === yr && c.w <= wk)); })
@@ -414,6 +449,9 @@ function renderPhone() {
         ? '<div class="ph-quote" style="background:' + s.tint + '"><svg width="26" height="26" viewBox="0 0 24 24" fill="' + s.color + '" aria-hidden="true"><path d="M4 18v-5c0-4 2-7 6-8l1 2c-2 1-3 2.5-3 4h3v7zM13 18v-5c0-4 2-7 6-8l1 2c-2 1-3 2.5-3 4h3v7z"/></svg><p>' + esc(tc.text) + '</p></div>'
         : '<div class="ph-notext" style="border-color:' + s.edge + '"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="' + s.color + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5c3-1.5 7-1.5 10 1 3-2.5 7-2.5 10-1v14c-3-1.5-7-1.5-10 1-3-2.5-7-2.5-10-1z"/><path d="M12 6v14"/></svg>Read this one together from the class Bible.</div>') +
       '</div></article>');
+    var wst = story(tc);
+    if (wst) h.push('<div class="ph-two">' + readLink(wst, "ph-btn ph-btn-line ph-link", "border-color:" + s.color + ";box-shadow:0 3px 0 " + s.shadow) +
+      '<button type="button" class="ph-btn ph-btn-line" data-act="view" data-v="tell" style="border-color:' + s.color + ';box-shadow:0 3px 0 ' + s.shadow + '">' + svg(SPEAK, 20, 2.6) + 'Story to tell</button></div>');
     h.push('<section class="ph-box" aria-label="Where it fits"><div class="fd" style="font-weight:600;font-size:15px;margin-bottom:8px">Where it fits in the big story</div>' + phTrail(tc.stage) +
       '<div class="ph-ends"><span>Old Testament</span><span>New Testament</span></div></section>');
     h.push('<div class="ph-two"><button type="button" class="ph-btn ph-btn-line" data-act="prev" style="border-color:#1D2B53;box-shadow:0 3px 0 #1D2B53"' + (wk <= 1 ? " disabled" : "") + '>' + svg(BACK, 18, 3) + 'Week ' + Math.max(1, wk - 1) + '</button>' +
