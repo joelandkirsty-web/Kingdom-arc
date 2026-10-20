@@ -108,6 +108,77 @@ footer { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; fo
 @keyframes bob { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-6px) } }
 .glow { animation: glow 1.8s ease-in-out infinite; }
 @keyframes glow { 0%,100% { box-shadow: 0 5px 0 #8E1E19, 0 0 0 0 rgba(215,50,44,.45) } 50% { box-shadow: 0 5px 0 #8E1E19, 0 0 0 10px rgba(215,50,44,0) } }
+/* Phone (teacher) view */
+.ph { max-width: 520px; margin: 0 auto; min-height: 100vh; padding: 16px 16px 22px; display: flex; flex-direction: column; gap: 14px; }
+.ph-top { display: flex; align-items: center; gap: 10px; }
+.ph-logo { width: 38px; height: 38px; border-radius: 12px; background: #D7322C; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 0 #8E1E19; transform: rotate(-6deg); color: #fff; }
+.ph-h1 { margin: 0 auto 0 0; font-weight: 700; font-size: 22px; line-height: 1.05; }
+.ph-sub { font-weight: 700; font-size: 14px; color: var(--muted); }
+.ph-back { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 0; background: #FFF1CC; display: flex; align-items: center; justify-content: center; }
+.ph-tag { flex: none; color: #fff; border-radius: 999px; padding: 6px 12px; font-weight: 600; font-size: 15px; }
+.ph-class { display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 6px 14px 6px 6px; background: #fff; border: 3px solid var(--sand); border-radius: 18px; box-shadow: 0 3px 0 var(--sand); text-align: left; }
+.ph-class .badge { width: 38px; height: 38px; font-size: 15px; }
+.ph-class-text { display: flex; flex-direction: column; margin-right: auto; }
+.ph-card { background: #fff; border: 4px solid; border-radius: 26px; overflow: hidden; }
+.ph-band { display: flex; align-items: center; gap: 12px; padding: 12px 16px; }
+.ph-band-icon { width: 46px; height: 46px; border-radius: 50%; border: 3px solid; display: flex; align-items: center; justify-content: center; flex: none; }
+.ph-card-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 6px; }
+.ph-ref { font-weight: 700; font-size: 38px; line-height: 1; }
+.ph-title { font-weight: 800; font-size: 18px; color: #4E4866; }
+.ph-quote { position: relative; margin-top: 8px; border-radius: 18px; padding: 14px 16px 14px 46px; }
+.ph-quote svg { position: absolute; left: 12px; top: 14px; }
+.ph-quote p { margin: 0; font-weight: 700; font-size: 19px; line-height: 1.4; }
+.ph-notext { margin-top: 8px; display: flex; align-items: center; gap: 12px; border: 3px dashed; border-radius: 18px; padding: 14px; font-weight: 800; font-size: 17px; line-height: 1.3; }
+.ph-box { background: #fff; border: 3px solid var(--sand); border-radius: 20px; padding: 10px 12px 12px; }
+.ph-trail { position: relative; display: flex; justify-content: space-between; align-items: center; }
+.ph-trail::before { content: ""; position: absolute; left: 14px; right: 14px; top: 50%; border-top: 3px dashed #E5D3AE; }
+.ph-stop { position: relative; width: 40px; height: 40px; padding: 0; border: 0; background: transparent; display: flex; align-items: center; justify-content: center; }
+.ph-dot { border-radius: 50%; border: 3px solid; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--navy); }
+.ph-ends { display: flex; justify-content: space-between; margin-top: 6px; font-weight: 800; font-size: 11px; color: var(--muted); }
+.ph-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.ph-btn { min-height: 52px; border-radius: 16px; display: flex; align-items: center; justify-content: center; gap: 6px; font-family: Fredoka, Nunito, sans-serif; font-weight: 600; font-size: 16px; padding: 6px 8px; }
+.ph-btn-line { border: 3px solid; background: #fff; }
+.ph-btn-red { border: 0; background: #C8302A; color: #fff; font-weight: 700; box-shadow: 0 4px 0 #8E1E19; }
+.ph-btn-navy { border: 0; background: var(--navy); color: #fff; font-weight: 700; box-shadow: 0 4px 0 #0B1430; }
+.ph-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+.ph-row { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 58px; padding: 6px 10px 6px 8px; border-radius: 16px; background: #fff; border: 3px solid var(--sand); text-align: left; }
+.ph-num { flex: none; width: 36px; height: 36px; border-radius: 50%; border: 2px solid; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; }
+.ph-row-text { min-width: 0; flex: 1; display: flex; flex-direction: column; }
+.ph-row-ref { font-weight: 600; font-size: 16px; line-height: 1.15; }
+.ph-row-title { font-weight: 700; font-size: 13px; color: #4E4866; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ph-row-end { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.ph-chip { display: flex; align-items: center; gap: 5px; border-radius: 999px; padding: 3px 9px 3px 5px; font-weight: 800; font-size: 12px; }
+.ph-chip i { width: 12px; height: 12px; border-radius: 50%; }
+.ph-status { font-weight: 800; font-size: 11px; }
+.ph-now { flex: none; background: #1F5FBF; color: #fff; border-radius: 999px; padding: 3px 9px; font-weight: 800; font-size: 11px; }
+.ph-stage { display: flex; flex-direction: column; gap: 12px; border: 3px solid; border-radius: 28px; padding: 18px 14px 14px; }
+.ph-stage-head { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; }
+.ph-medal { width: 92px; height: 92px; border-radius: 50%; border: 5px solid #fff; display: flex; align-items: center; justify-content: center; }
+.ph-stage h2 { font-size: 34px; line-height: 1; }
+.ph-cards { display: flex; flex-direction: column; gap: 8px; }
+.ph-cards .chip { padding: 8px 10px; }
+.ph-empty { border: 3px dashed; border-radius: 16px; padding: 16px; text-align: center; font-weight: 700; font-size: 14px; color: var(--muted); }
+.ph-hint { text-align: center; font-weight: 700; font-size: 13px; color: var(--muted); margin-top: -6px; }
+.sheet-scrim { position: fixed; inset: 0; z-index: 10; background: rgba(29,43,83,.55); display: flex; align-items: flex-end; justify-content: center; }
+.sheet { width: 100%; max-width: 520px; background: #fff; border-radius: 28px 28px 0 0; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 16px; animation: sheet .3s cubic-bezier(.2,.9,.3,1); }
+@keyframes sheet { 0% { transform: translateY(60%) } 100% { transform: none } }
+.sheet-grab { align-self: center; width: 48px; height: 5px; border-radius: 3px; background: var(--dash); }
+.sheet-label { font-weight: 800; font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.grid5 { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+.wk { height: 54px; border-radius: 16px; border: 3px solid; font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: center; }
+@media (max-width: 700px) {
+  .scrim { padding: 0; align-items: stretch; }
+  .big { max-width: none; max-height: none; height: 100%; border-radius: 0; border-width: 0; box-shadow: none !important; }
+  .big-top { padding: 14px 16px; gap: 10px; }
+  .big-icon { width: 50px; height: 50px; }
+  .big-stage { font-size: 17px; } .big-kid { font-size: 15px; } .big-when { font-size: 14px; padding: 4px 12px; }
+  .big-body { padding: 18px 18px 24px; }
+  .big-ref { font-size: 38px; } .big-title { font-size: 19px; }
+  .quote { padding: 16px 16px 16px 48px; } .quote svg { width: 28px; height: 28px; left: 12px; top: 16px; } .quote p { font-size: 21px; }
+  .notext p { font-size: 20px; }
+  .big-acts .btn-outline { margin-left: 0; flex: 1; justify-content: center; }
+}
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 </style>
 </head>
@@ -172,6 +243,7 @@ function visible() {
 }
 
 function render() {
+  if (isPhone()) return renderPhone();
   var yr = state.yr, wk = state.wk, placed = isPlaced(), tc = thisCard();
   var vis = visible();
   var litId = state.lb ? state.lb.list[state.lb.i] : null;
@@ -230,7 +302,20 @@ function render() {
   for (var i = 0; i <= yr; i++) h.push('<span class="legend-item"><span class="legend-dot" style="background:' + YEARS[i].color + '"></span>' + YEARS[i].name + (i === yr ? " (this year)" : "") + '</span>');
   h.push('<span style="margin-left:auto;color:#5A5470">Tap a card to read it · Space: next · ← →: week</span></footer>');
 
-  // Big card
+  h.push(bigCardHtml());
+  h.push('</div>');
+
+  document.getElementById("app").innerHTML = h.join("");
+  var first = document.querySelector(".big-acts button");
+  if (first) first.focus();
+  if (litId !== null) {
+    var lit = document.querySelector('.chip[data-v="' + litId + '"]');
+    if (lit) lit.scrollIntoView({ block: "nearest", inline: "center" });
+  }
+}
+
+function bigCardHtml() {
+  var h = [];
   if (state.open !== null && CARDS[state.open]) {
     var c = CARDS[state.open], s = STAGES[c.stage - 1], y = YEARS[c.yr];
     h.push('<div class="scrim" data-act="scrim"><div class="big rise" role="dialog" aria-modal="true" aria-label="' + esc(c.ref) + '" style="border-color:' + s.color + ';box-shadow:0 12px 0 ' + s.shadow + '">' +
@@ -248,16 +333,134 @@ function render() {
     if (state.lb) h.push('<button type="button" class="btn btn-navy" data-act="lookNext">Next card ' + svg('<path d="M5 12h14M13 6l6 6-6 6"/>', 24, 3) + '</button><div class="progress">' + (state.lb.i + 1) + ' of ' + state.lb.list.length + '</div>');
     h.push('<button type="button" class="btn btn-outline" data-act="close">' + (state.lb ? "Stop" : state.isNew ? "Not yet" : "Close") + '</button></div></div></div></div>');
   }
-  h.push('</div>');
-
-  document.getElementById("app").innerHTML = h.join("");
-  var first = document.querySelector(".big-acts button");
-  if (first) first.focus();
-  if (litId !== null) {
-    var lit = document.querySelector('.chip[data-v="' + litId + '"]');
-    if (lit) lit.scrollIntoView({ block: "nearest", inline: "center" });
-  }
+  return h.join("");
 }
+
+// ---------- Phone (teacher) view ----------
+var phoneMQ = window.matchMedia("(max-width: 700px)");
+function isPhone() { return phoneMQ.matches; }
+var BACK = '<path d="M15 5l-7 7 7 7"/>', FWD = '<path d="M9 5l7 7-7 7"/>';
+
+function phTrail(active) {
+  var out = '<nav class="ph-trail" aria-label="The 8 stages">';
+  STAGES.forEach(function (s) {
+    var on = s.n === active, sz = on ? 40 : 28;
+    out += '<button type="button" class="ph-stop" data-act="stage" data-v="' + s.n + '" aria-label="Stage ' + s.n + ', ' + s.name + '"' + (on ? ' aria-current="step"' : '') + '>' +
+      '<span class="ph-dot fd" style="width:' + sz + 'px;height:' + sz + 'px;font-size:' + (on ? 18 : 13) + 'px;background:' + (on ? s.color : "#fff") + ';border-color:' + s.color + '">' + s.n + '</span></button>';
+  });
+  return out + '</nav>';
+}
+
+function phBackHeader(title, sub) {
+  var y = YEARS[state.yr];
+  return '<div class="ph-top"><button type="button" class="ph-back" data-act="view" data-v="week" aria-label="Back to this week">' + svg(BACK, 20, 3) + '</button>' +
+    '<div style="margin-right:auto"><h1 class="ph-h1 fd">' + title + '</h1>' + (sub ? '<div class="ph-sub">' + sub + '</div>' : '') + '</div>' +
+    '<span class="ph-tag fd" style="background:' + y.color + ';color:' + y.ink + '">' + y.short + ' · Wk ' + state.wk + '</span></div>';
+}
+
+function renderPhone() {
+  var yr = state.yr, wk = state.wk, y = YEARS[yr], tc = thisCard();
+  var h = ['<div class="ph">'];
+
+  if (state.view === "term") {
+    h.push(phBackHeader("Term 1 plan", y.name + " · 10 weeks"));
+    h.push('<ol class="ph-list">');
+    CARDS.filter(function (c) { return c.yr === yr; }).sort(function (a, b) { return a.w - b.w; }).forEach(function (c) {
+      var s = STAGES[c.stage - 1], now = c.w === wk, done = c.w < wk;
+      h.push('<li><button type="button" class="ph-row" data-act="goweek" data-v="' + c.w + '" style="border-color:' + (now ? y.color : "#EADFCB") + ';background:' + (done ? "#FBF6EC" : "#fff") + '">' +
+        '<span class="ph-num fd" style="border-color:' + y.color + ';background:' + (now ? y.color : "#fff") + ';color:' + (now ? y.ink : "#1D2B53") + '">' + c.w + '</span>' +
+        '<span class="ph-row-text"><span class="ph-row-ref fd">' + esc(c.ref) + '</span><span class="ph-row-title">' + esc(c.title) + '</span></span>' +
+        '<span class="ph-row-end"><span class="ph-chip" style="background:' + s.tint + '"><i style="background:' + s.color + '"></i>' + s.name + '</span>' +
+        (now ? '<span class="ph-status" style="color:#1F5FBF">This week</span>' : done ? '<span class="ph-status" style="color:#2E6B35">Done</span>' : '') +
+        '</span></button></li>');
+    });
+    h.push('</ol>');
+  } else if (state.view === "story") {
+    var sn = state.storyStage || (tc ? tc.stage : 1), s = STAGES[sn - 1];
+    var cards = CARDS.filter(function (c) { return c.stage === sn && (c.yr < yr || (c.yr === yr && c.w <= wk)); })
+      .sort(function (a, b) { return a.yr - b.yr || a.w - b.w; });
+    h.push(phBackHeader("The whole story"));
+    h.push(phTrail(sn));
+    h.push('<section class="ph-stage" style="background:' + s.tint + ';border-color:' + s.edge + '"><div class="ph-stage-head">' +
+      '<div class="ph-medal" style="background:' + s.color + ';color:' + s.ink + ';box-shadow:0 5px 0 ' + s.shadow + '">' + svg(ICONS[sn], 46) + '</div>' +
+      '<div class="ph-sub" style="margin-top:6px">Stage ' + sn + ' of 8 · ' + (sn <= 5 ? "Old Testament" : "New Testament") + '</div>' +
+      '<h2 class="fd">' + s.name + '</h2><div style="font-weight:800;font-size:17px">' + s.kid + '</div><div class="ph-sub">' + s.span + '</div></div>' +
+      '<div class="ph-cards">');
+    cards.forEach(function (c) {
+      var cy = YEARS[c.yr], now = c.yr === yr && c.w === wk, earlier = c.yr < yr;
+      h.push('<button type="button" class="chip" data-act="open" data-v="' + c.id + '" style="background:' + (earlier ? "#FFFDF7" : "#fff") + ';border-style:' + (earlier ? "dashed" : "solid") + ';border-color:' + cy.color + ';box-shadow:0 3px 0 ' + (now ? cy.shadow : "#EADFCB") + '">' +
+        '<span class="badge fd" style="background:' + cy.color + ';color:' + cy.ink + '">' + cy.short + '</span>' +
+        '<span class="chip-text" style="flex:1"><span class="chip-ref fd">' + esc(c.ref) + '</span><span class="chip-title">' + (earlier ? cy.name + ", " : "") + 'Week ' + c.w + ' · ' + esc(c.title) + '</span></span>' +
+        (now ? '<span class="ph-now">This week</span>' : '') + '</button>');
+    });
+    if (!cards.length) h.push('<div class="ph-empty" style="border-color:' + s.edge + '">No cards here yet</div>');
+    h.push('</div></section>');
+    var prev = STAGES[sn - 2], next = STAGES[sn];
+    h.push('<div class="ph-two">' +
+      (prev ? '<button type="button" class="ph-btn ph-btn-line" data-act="stage" data-v="' + prev.n + '" style="border-color:' + prev.color + ';box-shadow:0 3px 0 ' + prev.shadow + '">' + svg(BACK, 18, 3) + prev.n + ' · ' + prev.name + '</button>' : '<span></span>') +
+      (next ? '<button type="button" class="ph-btn ph-btn-line" data-act="stage" data-v="' + next.n + '" style="border-color:' + next.color + ';box-shadow:0 3px 0 ' + next.shadow + '">' + next.n + ' · ' + next.name + svg(FWD, 18, 3) + '</button>' : '<span></span>') +
+      '</div><div class="ph-hint">or swipe left and right</div>');
+  } else {
+    var s = STAGES[tc.stage - 1];
+    h.push('<div class="ph-top"><div class="ph-logo">' + svg('<path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z"/>', 22, 2.4) + '</div><div class="ph-h1 fd">The Kingdom Arc</div></div>');
+    h.push('<button type="button" class="ph-class" data-act="picker"><span class="badge fd" style="background:' + y.color + ';color:' + y.ink + '">' + y.short + '</span>' +
+      '<span class="ph-class-text"><span class="fd" style="font-weight:600;font-size:19px;line-height:1.1">' + y.name + ' · Week ' + wk + '</span><span class="ph-sub" style="font-size:13px">Term 1 · tap to change</span></span>' +
+      svg('<path d="M6 9l6 6 6-6"/>', 22, 3) + '</button>');
+    h.push('<article class="ph-card" style="border-color:' + s.color + ';box-shadow:0 6px 0 ' + s.shadow + '">' +
+      '<div class="ph-band" style="background:' + s.color + ';color:' + s.ink + '"><div class="ph-band-icon" style="border-color:' + s.ink + '">' + svg(ICONS[s.n], 26) + '</div>' +
+      '<div><div class="fd" style="font-weight:600;font-size:17px;line-height:1.1">Stage ' + s.n + ' · ' + s.name + '</div><div style="font-weight:800;font-size:14px">' + s.kid + '</div></div></div>' +
+      '<div class="ph-card-body"><div class="ph-ref fd">' + esc(tc.ref) + '</div><div class="ph-title">' + esc(tc.title) + '</div>' +
+      (tc.text
+        ? '<div class="ph-quote" style="background:' + s.tint + '"><svg width="26" height="26" viewBox="0 0 24 24" fill="' + s.color + '" aria-hidden="true"><path d="M4 18v-5c0-4 2-7 6-8l1 2c-2 1-3 2.5-3 4h3v7zM13 18v-5c0-4 2-7 6-8l1 2c-2 1-3 2.5-3 4h3v7z"/></svg><p>' + esc(tc.text) + '</p></div>'
+        : '<div class="ph-notext" style="border-color:' + s.edge + '"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="' + s.color + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5c3-1.5 7-1.5 10 1 3-2.5 7-2.5 10-1v14c-3-1.5-7-1.5-10 1-3-2.5-7-2.5-10-1z"/><path d="M12 6v14"/></svg>Read this one together from the class Bible.</div>') +
+      '</div></article>');
+    h.push('<section class="ph-box" aria-label="Where it fits"><div class="fd" style="font-weight:600;font-size:15px;margin-bottom:8px">Where it fits in the big story</div>' + phTrail(tc.stage) +
+      '<div class="ph-ends"><span>Old Testament</span><span>New Testament</span></div></section>');
+    h.push('<div class="ph-two"><button type="button" class="ph-btn ph-btn-line" data-act="prev" style="border-color:#1D2B53;box-shadow:0 3px 0 #1D2B53"' + (wk <= 1 ? " disabled" : "") + '>' + svg(BACK, 18, 3) + 'Week ' + Math.max(1, wk - 1) + '</button>' +
+      '<button type="button" class="ph-btn ph-btn-line" data-act="next" style="border-color:#1D2B53;box-shadow:0 3px 0 #1D2B53"' + (wk >= 10 ? " disabled" : "") + '>Week ' + Math.min(10, wk + 1) + svg(FWD, 18, 3) + '</button></div>');
+    h.push('<div class="ph-two" style="margin-top:auto"><button type="button" class="ph-btn ph-btn-red" data-act="view" data-v="story">' + svg('<path d="M3 18c4 0 4-6 9-6s5 6 9 6"/><circle cx="3" cy="18" r="1.5"/><circle cx="21" cy="18" r="1.5"/>', 20, 2.6) + 'Whole story</button>' +
+      '<button type="button" class="ph-btn ph-btn-navy" data-act="view" data-v="term">' + svg('<path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/>', 20, 2.6) + 'Term plan</button></div>');
+
+    if (state.draft) {
+      var d = state.draft;
+      h.push('<div class="sheet-scrim" data-act="sheetScrim"><section class="sheet" role="dialog" aria-modal="true" aria-label="Choose class and week"><div class="sheet-grab" aria-hidden="true"></div>' +
+        '<div style="display:flex;align-items:center"><h2 class="fd" style="margin-right:auto;font-size:24px">Choose class &amp; week</h2><button type="button" class="ph-back" data-act="pclose" aria-label="Close">' + svg('<path d="M6 6l12 12M18 6L6 18"/>', 20, 3) + '</button></div>' +
+        '<div><div class="sheet-label">Class</div><div class="grid3">');
+      YEARS.forEach(function (yy, i) {
+        var on = i === d.yr;
+        h.push('<button type="button" class="pill fd" data-act="pyear" data-v="' + i + '" aria-pressed="' + on + '" style="border-color:' + yy.color + ';background:' + (on ? yy.color : "#fff") + ';color:' + (on ? yy.ink : "#1D2B53") + ';box-shadow:0 3px 0 ' + (on ? yy.shadow : "#EADFCB") + '">' + yy.name + '</button>');
+      });
+      var dc = YEARS[d.yr];
+      h.push('</div></div><div><div class="sheet-label">Term 1 week</div><div class="grid5">');
+      for (var n = 1; n <= 10; n++) {
+        var sel = n === d.wk;
+        h.push('<button type="button" class="wk fd" data-act="pweek" data-v="' + n + '" aria-pressed="' + sel + '" style="border-color:' + (sel ? dc.color : "#EADFCB") + ';background:' + (sel ? dc.color : "#fff") + ';color:' + (sel ? dc.ink : "#1D2B53") + '">' + n + '</button>');
+      }
+      h.push('</div></div><button type="button" class="ph-btn ph-btn-red" data-act="papply" style="min-height:56px;font-size:20px">Show ' + dc.name + ' · Week ' + d.wk + '</button></section></div>');
+    }
+  }
+
+  h.push(bigCardHtml());
+  h.push('</div>');
+  document.getElementById("app").innerHTML = h.join("");
+  var first = document.querySelector(".big-acts button, .sheet [aria-pressed=true]");
+  if (first) first.focus();
+}
+
+phoneMQ.addEventListener("change", function () { state.draft = null; render(); });
+
+// Swipe between stages on the phone story view
+var touchX = null, touchY = null;
+document.addEventListener("touchstart", function (e) { touchX = e.touches[0].clientX; touchY = e.touches[0].clientY; }, { passive: true });
+document.addEventListener("touchend", function (e) {
+  if (touchX === null || !isPhone() || state.view !== "story" || state.open !== null) return;
+  var dx = e.changedTouches[0].clientX - touchX, dy = e.changedTouches[0].clientY - touchY;
+  touchX = null;
+  if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+  var tc = thisCard(), sn = state.storyStage || (tc ? tc.stage : 1);
+  sn = Math.min(8, Math.max(1, sn + (dx < 0 ? 1 : -1)));
+  actions.stage(sn);
+}, { passive: true });
 
 var justTimer;
 var actions = {
@@ -285,7 +488,17 @@ var actions = {
     lb.i++; state.open = lb.list[lb.i]; render();
   },
   close: function () { state.open = null; state.isNew = false; state.lb = null; render(); },
-  scrim: function () { actions.close(); }
+  scrim: function () { actions.close(); },
+  // Phone view
+  view: function (v) { state.view = v; state.storyStage = null; render(); window.scrollTo(0, 0); },
+  stage: function (v) { state.view = "story"; state.storyStage = +v; render(); window.scrollTo(0, 0); },
+  goweek: function (v) { state.view = "week"; setWeek(+v); window.scrollTo(0, 0); },
+  picker: function () { state.draft = { yr: state.yr, wk: state.wk }; render(); },
+  pyear: function (v) { state.draft.yr = +v; render(); },
+  pweek: function (v) { state.draft.wk = +v; render(); },
+  pclose: function () { state.draft = null; render(); },
+  sheetScrim: function () { actions.pclose(); },
+  papply: function () { var d = state.draft; state.draft = null; state.yr = d.yr; setWeek(d.wk); }
 };
 function setWeek(w) {
   state.wk = Math.min(10, Math.max(1, w)); state.placed = null; state.lb = null; state.open = null; state.just = null; save(); render();
@@ -294,14 +507,15 @@ function setWeek(w) {
 document.addEventListener("click", function (e) {
   var t = e.target.closest("[data-act]");
   if (!t) return;
-  if (t.dataset.act === "scrim" && e.target !== t) return;
+  if ((t.dataset.act === "scrim" || t.dataset.act === "sheetScrim") && e.target !== t) return;
   actions[t.dataset.act](t.dataset.v);
 });
 
 document.addEventListener("keydown", function (e) {
   // A focused button already handles Space itself
   if (e.key === " " && e.target.tagName === "BUTTON") return;
-  if (e.key === "Escape") { if (state.open !== null) actions.close(); return; }
+  if (e.key === "Escape") { if (state.open !== null) actions.close(); else if (state.draft) actions.pclose(); return; }
+  if (isPhone()) return;
   if (state.open !== null) {
     if (e.key === " " || e.key === "ArrowRight") {
       e.preventDefault();
