@@ -466,8 +466,8 @@ var STORIES = {
   "listen": "The desert, to Midian. God heard his people crying out."
  },
  "2-4": {
-  "read": "Exodus 3:1–10",
-  "url": "https://www.biblegateway.com/passage/?search=Exodus%203%3A1-10&version=NLT",
+  "read": "Exodus 3:1–12",
+  "url": "https://www.biblegateway.com/passage/?search=Exodus%203%3A1-12&version=NLT",
   "source": "Exodus 3:1–10",
   "gsb": "the Exodus stories (Stories 27 to 32)",
   "tell": [
@@ -483,7 +483,9 @@ var STORIES = {
    }
   ],
   "ask": "What was strange about the bush? What did God say he would do?",
-  "listen": "It was on fire but did not burn up. Rescue his people."
+  "listen": "It was on fire but did not burn up. Rescue his people.",
+  "ask2": "What can we learn about God from the burning bush?",
+  "listen2": "God is holy. God sees and hears his people. God comes down to rescue them."
  },
  "2-5": {
   "read": "Exodus 5:1–2",

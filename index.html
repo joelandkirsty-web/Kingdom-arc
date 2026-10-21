@@ -406,7 +406,8 @@ function renderPhone() {
         else if (x.all) h.push('<p class="all"><span>All:</span>' + esc(x.all) + '</p>');
         else if (x.cue) h.push('<p class="cue">' + esc(x.cue) + '</p>');
       });
-      h.push('<div class="ask"><p><b>Ask.</b> ' + esc(st.ask) + '</p><p class="ph-sub" style="margin-top:4px">Listen for: ' + esc(st.listen) + '</p></div>');
+      h.push('<div class="ask"><p><b>Ask.</b> ' + esc(st.ask) + '</p><p class="ph-sub" style="margin-top:4px">Listen for: ' + esc(st.listen) + '</p>' +
+        (st.ask2 ? '<p style="margin-top:8px"><b>Ask.</b> ' + esc(st.ask2) + '</p><p class="ph-sub" style="margin-top:4px">Listen for: ' + esc(st.listen2) + '</p>' : '') + '</div>');
     }
     h.push('</section>');
     if (st) h.push(readLink(st, "ph-btn ph-btn-line ph-link", "border-color:#1D2B53;box-shadow:0 3px 0 #1D2B53"));
