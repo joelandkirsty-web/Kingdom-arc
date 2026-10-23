@@ -629,12 +629,12 @@ var STORIES = {
   "gsb": "the Abraham stories (Stories 8 to 14)",
   "tell": [
    "Many years after the garden, there was a man called Abram. He lived in a city called Ur, with his wife Sarai. They had lots of things, but there was one thing they did not have. They had no children, and Sarai was too old to have a baby.",
-   "One day God spoke to Abram. God said, “Leave your country, your relatives, and your father’s family, and go to the land that I will show you.”",
-   "God did not tell him where. Just, go.",
-   "And then God made Abram a promise. Three things.",
-   "“I will make you into a great nation.” A whole nation, from a man with no children.",
-   "“I will give you a land.” A place for his family to live.",
-   "“And all the families on earth will be blessed through you.” Every family. Every country. Including ours.",
+   "One day God spoke to Abram. God said, “Leave your native country, your relatives, and your father’s family, and go to the land that I will show you.”",
+   "God did not tell him where. Just: go.",
+   "And then God made Abram a promise, with three big parts.",
+   "A nation: “I will make you into a great nation.” A whole nation, from a man with no children.",
+   "A land: “the land that I will show you.” A place for his family to live.",
+   "A blessing: “All the families on earth will be blessed through you.” Every family. Every country. Including ours.",
    "This was the promise from the garden, getting bigger. God was going to put things right, and he was going to do it through Abram’s family.",
    {
     "all": "All the families on earth will be blessed through you."
@@ -675,7 +675,7 @@ var STORIES = {
    "Abram looked up. More stars than anyone could ever count.",
    "And God said, “That’s how many descendants you will have.”",
    "Abram was old. Sarai was old. It looked impossible. But the Bible says, “Abram believed the Lord, and the Lord counted him as righteous because of his faith.”",
-   "Abram did not earn God’s favour. He trusted God’s promise, and God counted him as right with him.",
+   "Abram did not earn God’s favour. He didn’t have to do anything first to impress God. He trusted God’s promise, and God counted him as right with him.",
    {
     "all": "Abram believed the Lord."
    }
@@ -726,7 +726,8 @@ var STORIES = {
   "source": "Genesis 21:1–7",
   "gsb": "the Abraham stories (Stories 8 to 14)",
   "tell": [
-   "And the Bible says, “The Lord kept his word and did for Sarah exactly what he had promised.”",
+   "Last week, the Lord promised Abraham that by this time next year, Sarah would have a son. Sarah laughed, because she was far too old.",
+   "A year later, the Bible says, “The Lord kept his word and did for Sarah exactly what he had promised.”",
    "Sarah had a baby boy. Abraham was one hundred years old. Sarah was ninety.",
    "Twenty-five years. That is how long they had waited since God first told Abraham to go.",
    "They called the baby Isaac, which means “he laughs”. Sarah said, “God has brought me laughter. Everyone who hears about this will laugh with me.”",
@@ -749,7 +750,7 @@ var STORIES = {
    "God said, “Take your son, your only son Isaac, whom you love so much, and go to the land of Moriah. Give him to me as an offering on one of the mountains.”",
    "Isaac was the son God had promised. The whole promise depended on him. And now God was asking Abraham to give him back.",
    "Abraham did not understand. But he got up early the next morning. He cut wood, and he and Isaac and two servants set off.",
-   "After three days they saw the mountain. Abraham said to the servants, “Stay here. The boy and I will go up and worship, and then we will come back.” We will come back.",
+   "After three days they saw the mountain. Abraham said to the servants, “Stay here. The boy and I will go up and worship, and then we will come back.”",
    "Isaac carried the wood. Abraham carried the fire and the knife. And Isaac said, “Father, we have the fire and the wood, but where is the lamb?”",
    "Abraham said, “God will provide a lamb, my son.”",
    {
