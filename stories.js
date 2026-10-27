@@ -990,8 +990,8 @@ var STORIES = {
   "listen": "From top to bottom. God tore it. The way to God is open."
  },
  "5-1": {
-  "read": "Judges 2:10–19",
-  "url": "https://www.biblegateway.com/passage/?search=Judges%202%3A10-19&version=NLT",
+  "read": "Judges 2:11–19 (selected)",
+  "url": "https://www.biblegateway.com/passage/?search=Judges%202%3A11-19&version=NLT",
   "source": "Joshua 24:31; Judges 2:6–19",
   "gsb": null,
   "tell": [
@@ -1026,7 +1026,7 @@ var STORIES = {
    }
   ],
   "ask": "Where was Gideon hiding? Why did the angel call him a mighty hero?",
-  "listen": "In a winepress. Because the LORD was with him."
+  "listen": "In a winepress, a pit in the ground. Because the LORD was with him."
  },
  "5-3": {
   "read": "Judges 7:19–22",
