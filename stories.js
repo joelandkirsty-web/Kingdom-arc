@@ -411,7 +411,7 @@ var STORIES = {
   "read": "Exodus 1:8–14",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%201%3A8-14&version=NLT",
   "source": "Exodus 1:6–14",
-  "gsb": "the Exodus stories (Stories 27 to 32)",
+  "gsb": "Story 27, God Protects Baby Moses (page 55)",
   "tell": [
    "A long time ago, a family went to live in a country called Egypt. It was Jacob’s family, the family God had made a promise to. In Egypt they had children, and their children had children, until there were so many of them that they filled the land. They were called the Israelites, God’s people.",
    "Then a new king came to rule Egypt. The king of Egypt was called Pharaoh. This Pharaoh did not care about God’s people. He looked at how many there were, and he was afraid of them.",
@@ -430,7 +430,7 @@ var STORIES = {
   "read": "Exodus 2:1–10",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%202%3A1-10&version=NLT",
   "source": "Exodus 1:22–2:10",
-  "gsb": "the Exodus stories (Stories 27 to 32)",
+  "gsb": "Story 27, God Protects Baby Moses (page 55)",
   "tell": [
    "Pharaoh was still afraid of God’s people. So he made a cruel rule. Every baby boy born to the Israelites had to be thrown into the river Nile.",
    "One Israelite mother had a baby boy, and she would not give him up. She hid him for three months. But babies get bigger and louder, and she could not hide him any longer.",
@@ -450,7 +450,7 @@ var STORIES = {
   "read": "Exodus 2:23–25",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%202%3A23-25&version=NLT",
   "source": "Exodus 2:11–25",
-  "gsb": "the Exodus stories (Stories 27 to 32)",
+  "gsb": "Stories 27 and 28, God Protects Baby Moses and God Calls Moses (pages 55 and 56)",
   "tell": [
    "Moses grew up in Pharaoh’s palace. But he knew he was one of God’s people.",
    "One day Moses went out and saw an Egyptian beating an Israelite slave. Moses was so angry that he killed the Egyptian. When Pharaoh heard about it, he wanted to kill Moses. So Moses ran away, far into the desert, to a land called Midian.",
@@ -469,7 +469,7 @@ var STORIES = {
   "read": "Exodus 3:1–12",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%203%3A1-12&version=NLT",
   "source": "Exodus 3:1–10",
-  "gsb": "the Exodus stories (Stories 27 to 32)",
+  "gsb": "Story 28, God Calls Moses (page 56)",
   "tell": [
    "One day Moses was looking after the sheep near a mountain. And he saw something strange. A bush was on fire, but it was not burning up. The flames kept going, and the leaves stayed green.",
    "Moses went closer to look. And God called to him from the middle of the bush. “Moses! Moses!”",
@@ -491,7 +491,7 @@ var STORIES = {
   "read": "Exodus 5:1–2",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%205%3A1-2&version=NLT",
   "source": "Exodus 5:1–2; 7:14–24",
-  "gsb": "the Exodus stories (Stories 27 to 32)",
+  "gsb": "Story 29, Moses Confronts Pharaoh (page 58)",
   "tell": [
    "Moses went back to Egypt with his brother Aaron. They went to see Pharaoh in his palace.",
    "Moses said, “This is what the Lord, the God of Israel, says: Let my people go.”",
@@ -510,7 +510,7 @@ var STORIES = {
   "read": "Exodus 10:21–23",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%2010%3A21-23&version=NLT",
   "source": "Exodus 8–10",
-  "gsb": "the Exodus stories (Stories 27 to 32)",
+  "gsb": "Story 30, God Sends Plagues Against Egypt (page 61)",
   "tell": [
    "Pharaoh would not let God’s people go. So after the river of blood, God sent trouble on Egypt, again and again. The Bible calls them plagues.",
    "First frogs. Frogs everywhere. In the houses, in the beds, in the ovens. Then tiny gnats, then swarms of flies. Then the Egyptians’ animals got sick. Then sores on the people’s skin.",
@@ -529,7 +529,7 @@ var STORIES = {
   "read": "Exodus 12:3–13",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%2012%3A3-13&version=NLT",
   "source": "Exodus 11:1; 12:1–13",
-  "gsb": "the Exodus stories (Stories 27 to 32)",
+  "gsb": "Story 31, The Last Plague & the First Passover (page 62)",
   "tell": [
    "Pharaoh still would not let God’s people go. So God told Moses there would be one last plague. It would be the worst of all. On that night, the oldest son in every family in Egypt would die.",
    "But God gave his people a way to be safe.",
@@ -549,7 +549,7 @@ var STORIES = {
   "read": "Exodus 12:29–32",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%2012%3A29-32&version=NLT",
   "source": "Exodus 12:29–42",
-  "gsb": "the Exodus stories (Stories 27 to 32)",
+  "gsb": "Story 31, The Last Plague & the First Passover (page 62)",
   "tell": [
    "God’s people did everything God said. They chose their lambs. They painted the blood on their doors. They ate the meal inside, dressed and ready.",
    "That night, at midnight, God did what he had said. In every Egyptian home, from Pharaoh’s palace to the poorest house, the oldest son died. There was crying all over Egypt.",
@@ -568,7 +568,7 @@ var STORIES = {
   "read": "Exodus 14:21–31",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%2014%3A21-31&version=NLT",
   "source": "Exodus 14",
-  "gsb": "the Exodus stories (Stories 27 to 32)",
+  "gsb": "Story 32, God Parts the Red Sea (page 64)",
   "tell": [
    "God’s people walked out of Egypt. God went ahead of them in a tall cloud by day and a pillar of fire by night, showing them the way.",
    "But back in Egypt, Pharaoh changed his mind again. “What have we done? We have let our slaves go!” He jumped in his chariot, and took his whole army after them.",
@@ -626,7 +626,7 @@ var STORIES = {
   "read": "Genesis 12:1–3",
   "url": "https://www.biblegateway.com/passage/?search=Genesis%2012%3A1-3&version=NLT",
   "source": "Genesis 11:27–12:3",
-  "gsb": "the Abraham stories (Stories 8 to 14)",
+  "gsb": "Story 8, Abram & God’s Promise (page 16)",
   "tell": [
    "Many years after the garden, there was a man called Abram. He lived in a city called Ur, with his wife Sarai. They had lots of things, but there was one thing they did not have. They had no children, and Sarai was too old to have a baby.",
    "One day God spoke to Abram. God said, “Leave your native country, your relatives, and your father’s family, and go to the land that I will show you.”",
@@ -647,7 +647,7 @@ var STORIES = {
   "read": "Genesis 12:4–9",
   "url": "https://www.biblegateway.com/passage/?search=Genesis%2012%3A4-9&version=NLT",
   "source": "Genesis 12:4–9",
-  "gsb": "the Abraham stories (Stories 8 to 14)",
+  "gsb": "Story 8, Abram & God’s Promise (page 16)",
   "tell": [
    "So Abram went, just as God told him. He was seventy-five years old.",
    "He packed up everything. His wife Sarai, his nephew Lot, all their servants, sheep, goats, donkeys and camels. And they set off, not knowing where they were going.",
@@ -666,7 +666,7 @@ var STORIES = {
   "read": "Genesis 15:1–6",
   "url": "https://www.biblegateway.com/passage/?search=Genesis%2015%3A1-6&version=NLT",
   "source": "Genesis 15:1–6",
-  "gsb": "the Abraham stories (Stories 8 to 14)",
+  "gsb": "Story 9, God Makes a Covenant with Abram (page 18)",
   "tell": [
    "Years went by in Canaan. Abram got older. Sarai got older. And still no baby.",
    "One night God spoke to Abram again. “Do not be afraid, Abram. I will protect you, and your reward will be great.”",
@@ -687,7 +687,7 @@ var STORIES = {
   "read": "Genesis 17:1–8",
   "url": "https://www.biblegateway.com/passage/?search=Genesis%2017%3A1-8&version=NLT",
   "source": "Genesis 16:1–2; 17:1–8, 15–16",
-  "gsb": "the Abraham stories (Stories 8 to 14)",
+  "gsb": "Story 10, God Gives Abram a New Name (page 20)",
   "tell": [
    "Ten years in Canaan, and still no baby. Sarai got tired of waiting and made her own plan to get a child. It did not make anyone happy.",
    "When Abram was ninety-nine, God came to him again and said, “I am God Almighty.” Almighty means God can do anything.",
@@ -705,7 +705,7 @@ var STORIES = {
   "read": "Genesis 18:9–15",
   "url": "https://www.biblegateway.com/passage/?search=Genesis%2018%3A9-15&version=NLT",
   "source": "Genesis 18:1–15",
-  "gsb": "the Abraham stories (Stories 8 to 14)",
+  "gsb": "Story 11, The Lord Appears to Abraham (page 23)",
   "tell": [
    "One hot afternoon, Abraham was sitting at the entrance of his tent. He looked up and saw three visitors standing nearby.",
    "Abraham ran to meet them. He bowed down and said, “Please stay and rest. Let me bring you water to wash your feet, and some food.” Sarah baked bread, and Abraham cooked the best calf he had.",
@@ -724,7 +724,7 @@ var STORIES = {
   "read": "Genesis 21:1–7",
   "url": "https://www.biblegateway.com/passage/?search=Genesis%2021%3A1-7&version=NLT",
   "source": "Genesis 21:1–7",
-  "gsb": "the Abraham stories (Stories 8 to 14)",
+  "gsb": "Story 13, Isaac & Ishmael (page 27)",
   "tell": [
    "Last week, the Lord promised Abraham that by this time next year, Sarah would have a son. Sarah laughed, because she was far too old.",
    "A year later, the Bible says, “The Lord kept his word and did for Sarah exactly what he had promised.”",
@@ -744,7 +744,7 @@ var STORIES = {
   "read": "Genesis 22:1–8",
   "url": "https://www.biblegateway.com/passage/?search=Genesis%2022%3A1-8&version=NLT",
   "source": "Genesis 22:1–8",
-  "gsb": "the Abraham stories (Stories 8 to 14)",
+  "gsb": "Story 14, Abraham Is Tested (page 28)",
   "tell": [
    "Isaac grew up. And one day God tested Abraham.",
    "God said, “Take your son, your only son Isaac, whom you love so much, and go to the land of Moriah. Give him to me as an offering on one of the mountains.”",
@@ -764,7 +764,7 @@ var STORIES = {
   "read": "Genesis 22:9–14",
   "url": "https://www.biblegateway.com/passage/?search=Genesis%2022%3A9-14&version=NLT",
   "source": "Genesis 22:9–14",
-  "gsb": "the Abraham stories (Stories 8 to 14)",
+  "gsb": "Story 14, Abraham Is Tested (page 28)",
   "tell": [
    "Abraham and Isaac reached the top of the mountain. Abraham built an altar, and laid the wood on it.",
    "Abraham trusted that God would keep his promise about Isaac, even now. He believed God could even bring Isaac back to life.",
@@ -803,7 +803,7 @@ var STORIES = {
   "read": "Exodus 19:3–6",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%2019%3A3-6&version=NLT",
   "source": "Exodus 14:30–15:2; 19:1–6",
-  "gsb": "the Sinai and tabernacle stories (Stories 32 to 38)",
+  "gsb": "Story 32, God Parts the Red Sea (page 64)",
   "tell": [
    "God’s people, the Israelites, had been slaves in Egypt for hundreds of years. God sent Moses to tell Pharaoh, “Let my people go.” After ten plagues and the night of the Passover, God brought them out. When Pharaoh chased them, God opened the Red Sea, and they walked through on dry ground.",
    "On the other side they sang, “The Lord is my strength and my song. He has given me victory.”",
@@ -819,10 +819,10 @@ var STORIES = {
   "listen": "To Mount Sinai, to himself. His own special treasure."
  },
  "4-2": {
-  "read": "Exodus 19:16–20",
-  "url": "https://www.biblegateway.com/passage/?search=Exodus%2019%3A16-20&version=NLT",
+  "read": "Exodus 19:16–23",
+  "url": "https://www.biblegateway.com/passage/?search=Exodus%2019%3A16-23&version=NLT",
   "source": "Exodus 19:9–25",
-  "gsb": "the Sinai and tabernacle stories (Stories 32 to 38)",
+  "gsb": "Story 34, God Gives Moses the Ten Commandments (page 68)",
   "tell": [
    "God told Moses, “I am going to come to you in a thick cloud, so the people can hear me when I speak.”",
    "The people had to get ready for two days. They washed their clothes. And Moses marked a line around the bottom of the mountain. “Do not cross this line,” God said. “Do not even touch the mountain.”",
@@ -841,12 +841,12 @@ var STORIES = {
   "read": "Exodus 20:1–17",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%2020%3A1-17&version=NLT",
   "source": "Exodus 20:1–17",
-  "gsb": "the Sinai and tabernacle stories (Stories 32 to 38)",
+  "gsb": "Story 34, God Gives Moses the Ten Commandments (page 68)",
   "tell": [
    "Then God spoke from the mountain, so all the people could hear. And the first thing God said was this:",
    "“I am the Lord your God, who rescued you from the land of Egypt, the place of your slavery.”",
    "Listen to the order. God rescued them first. Then he gave them his law. They were not rescued because they kept the rules. They were already rescued, already God’s people. The law showed them how to live as God’s people.",
-   "God gave them ten commands, sometimes called the Ten Words. The first four are about loving God. Have no other gods. Do not make idols. Do not misuse God’s name. Keep the Sabbath day holy.",
+   "God gave them ten commands. We call them the Ten Commandments. The first four are about loving God. Have no other gods. Do not make idols. Do not misuse God’s name. Keep the Sabbath day holy.",
    "The other six are about loving other people. Honour your father and mother. Do not murder. Be faithful in marriage. Do not steal. Do not lie about others. Do not want what belongs to someone else.",
    "Later, God wrote them on two flat pieces of stone.",
    {
@@ -857,10 +857,10 @@ var STORIES = {
   "listen": "“I am the LORD your God, who rescued you.” Loving God, and loving other people."
  },
  "4-4": {
-  "read": "Exodus 32:1–6",
-  "url": "https://www.biblegateway.com/passage/?search=Exodus%2032%3A1-6&version=NLT",
+  "read": "Exodus 32:1–14",
+  "url": "https://www.biblegateway.com/passage/?search=Exodus%2032%3A1-14&version=NLT",
   "source": "Exodus 24:18; 32:1–14",
-  "gsb": "the Sinai and tabernacle stories (Stories 32 to 38)",
+  "gsb": "Story 36, The Golden Calf (page 72)",
   "tell": [
    "Moses went back up the mountain to meet with God. He was gone forty days and forty nights.",
    "Down at the bottom, the people got impatient. “We don’t know what has happened to Moses,” they said to his brother Aaron. “Make us gods to lead us.”",
@@ -880,7 +880,7 @@ var STORIES = {
   "read": "Exodus 33:12–17",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%2033%3A12-17&version=NLT",
   "source": "Exodus 33:1–3, 12–17; 34:1–7",
-  "gsb": "the Sinai and tabernacle stories (Stories 32 to 38)",
+  "gsb": "Story 37, God Has Mercy on Israel (page 74)",
   "tell": [
    "After the golden calf, God said something terrible. “Go to the land I promised you. I will send an angel ahead of you. But I will not go with you myself.”",
    "The people would get the land. But not God.",
@@ -899,7 +899,7 @@ var STORIES = {
   "read": "Exodus 25:1–9",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%2025%3A1-9&version=NLT",
   "source": "Exodus 25:1–9",
-  "gsb": "the Sinai and tabernacle stories (Stories 32 to 38)",
+  "gsb": "Story 35, The Tabernacle (page 71)",
   "tell": [
    "While Moses was on the mountain, God gave him a set of plans. Plans for something to build.",
    "God said, “Have the people build me a holy place, so I can live among them.”",
@@ -918,7 +918,7 @@ var STORIES = {
   "read": "Exodus 25:10–22",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%2025%3A10-22&version=NLT",
   "source": "Exodus 25:10–22; 26:31–33",
-  "gsb": "the Sinai and tabernacle stories (Stories 32 to 38)",
+  "gsb": "Story 35, The Tabernacle (page 71)",
   "tell": [
    "The tabernacle had a courtyard around it, with a fence of cloth. Inside the courtyard stood the tent itself.",
    "Inside the tent were two rooms. In the first room, called the Holy Place, there was a golden lampstand with seven lamps that burned all night, and a golden table with bread on it.",
@@ -937,7 +937,7 @@ var STORIES = {
   "read": "Exodus 40:33–35",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%2040%3A33-35&version=NLT",
   "source": "Exodus 39:42–43; 40:16–35",
-  "gsb": "the Sinai and tabernacle stories (Stories 32 to 38)",
+  "gsb": "Story 35, The Tabernacle (page 71)",
   "tell": [
    "The people worked hard, following God’s plans exactly. The skilled workers wove the curtains, carved the wood, and shaped the gold.",
    "When everything was ready, Moses looked it all over. They had done everything just as God had said. And Moses blessed them.",
@@ -956,7 +956,7 @@ var STORIES = {
   "read": "Exodus 40:36–38",
   "url": "https://www.biblegateway.com/passage/?search=Exodus%2040%3A36-38&version=NLT",
   "source": "Exodus 40:36–38; Numbers 9:15–23",
-  "gsb": "the Sinai and tabernacle stories (Stories 32 to 38)",
+  "gsb": "Story 35, The Tabernacle (page 71)",
   "tell": [
    "From then on, the cloud stayed over the tabernacle. In the day it was a cloud. At night it glowed like fire, so the whole camp could see it.",
    "When the cloud lifted up off the tent, the people packed up and followed it. When the cloud stopped, they stopped, and set up camp, with the tabernacle in the middle.",
@@ -974,7 +974,7 @@ var STORIES = {
   "read": "Matthew 27:45–54",
   "url": "https://www.biblegateway.com/passage/?search=Matthew%2027%3A45-54&version=NLT",
   "source": "Matthew 27:45–54; 28:1–6",
-  "gsb": "Story 116, The Death of Christ (page 234)",
+  "gsb": "Stories 116 and 117, The Death of Christ and The Resurrection (pages 234 and 237)",
   "tell": [
    "Remember the curtain in the tabernacle? Later, when God’s people built a temple in Jerusalem, it had the same curtain. Thick and heavy, closing off the Most Holy Place. For hundreds of years, nobody could go behind it except the high priest, once a year.",
    "Then Jesus came. And on a Friday, the soldiers nailed Jesus to a cross outside Jerusalem.",
@@ -993,7 +993,7 @@ var STORIES = {
   "read": "Judges 2:10–19",
   "url": "https://www.biblegateway.com/passage/?search=Judges%202%3A10-19&version=NLT",
   "source": "Joshua 24:31; Judges 2:6–19",
-  "gsb": "the stories from Judges to Solomon (Stories 46 to 55, 60 and 61)",
+  "gsb": null,
   "tell": [
    "God had rescued his people from Egypt, met them at Sinai, and lived among them in the tabernacle. Then, under a leader called Joshua, he brought them into the land he had promised Abraham.",
    "While Joshua was alive, the people served the Lord. But then Joshua died. And the Bible says, “Another generation grew up who did not acknowledge the Lord or remember the mighty things he had done for Israel.”",
@@ -1012,7 +1012,7 @@ var STORIES = {
   "read": "Judges 6:11–16",
   "url": "https://www.biblegateway.com/passage/?search=Judges%206%3A11-16&version=NLT",
   "source": "Judges 6:1–16",
-  "gsb": "the stories from Judges to Solomon (Stories 46 to 55, 60 and 61)",
+  "gsb": "Story 46, God Calls Gideon (page 92)",
   "tell": [
    "Round again. The people forgot God, and this time an enemy called the Midianites came. Every year, at harvest, they swarmed into the land like locusts, with their camels, and took everything. God’s people hid in caves in the hills.",
    "And they cried out to the Lord.",
@@ -1032,7 +1032,7 @@ var STORIES = {
   "read": "Judges 7:19–22",
   "url": "https://www.biblegateway.com/passage/?search=Judges%207%3A19-22&version=NLT",
   "source": "Judges 7:1–22; 8:22–35",
-  "gsb": "the stories from Judges to Solomon (Stories 46 to 55, 60 and 61)",
+  "gsb": "Story 47, Gideon’s Victory (page 95)",
   "tell": [
    "Gideon gathered an army: thirty-two thousand men. But God said, “You have too many. If you win, the people will boast that they saved themselves.”",
    "So Gideon told everyone who was afraid to go home. Twenty-two thousand left. Still too many, God said. In the end, God chose just three hundred men.",
@@ -1051,7 +1051,7 @@ var STORIES = {
   "read": "Judges 16:23–30",
   "url": "https://www.biblegateway.com/passage/?search=Judges%2016%3A23-30&version=NLT",
   "source": "Judges 13:1–5; 14–16 (selected)",
-  "gsb": "the stories from Judges to Solomon (Stories 46 to 55, 60 and 61)",
+  "gsb": "Stories 48 and 49, God Gives Samson Strength and Samson Loses His Strength (pages 96 and 98)",
   "tell": [
    "Round again. Forty years under an enemy called the Philistines. And God promised a couple a son who would begin to rescue Israel. His name was Samson.",
    "Samson was given to God from birth, and as a sign of it his hair was never to be cut. God gave him enormous strength. He tore a lion apart with his bare hands. He beat whole groups of Philistines on his own.",
@@ -1070,7 +1070,7 @@ var STORIES = {
   "read": "Ruth 4:13–17",
   "url": "https://www.biblegateway.com/passage/?search=Ruth%204%3A13-17&version=NLT",
   "source": "Ruth 1–4",
-  "gsb": "the stories from Judges to Solomon (Stories 46 to 55, 60 and 61)",
+  "gsb": "Story 50, Ruth (page 101)",
   "tell": [
    "In the days when the judges ruled, there was a famine in Israel. A woman called Naomi left Bethlehem with her husband and two sons, and went to live in a foreign country called Moab.",
    "There her husband died. Her sons married Moabite women, Orpah and Ruth, and then both sons died too.",
@@ -1091,7 +1091,7 @@ var STORIES = {
   "read": "1 Samuel 3:1–10",
   "url": "https://www.biblegateway.com/passage/?search=1%20Samuel%203%3A1-10&version=NLT",
   "source": "1 Samuel 1:20; 3:1–21",
-  "gsb": "the stories from Judges to Solomon (Stories 46 to 55, 60 and 61)",
+  "gsb": "Stories 51 and 52, God Hears Hannah’s Prayers and God Calls Little Samuel (pages 102 and 105)",
   "tell": [
    "At the end of the time of the judges, a woman called Hannah prayed for a son. God answered her, and she called him Samuel. When he was still a boy, she brought him to live at the tabernacle and serve God, with an old priest called Eli.",
    "In those days, the Bible says, messages from the Lord were very rare.",
@@ -1110,7 +1110,7 @@ var STORIES = {
   "read": "1 Samuel 8:4–9",
   "url": "https://www.biblegateway.com/passage/?search=1%20Samuel%208%3A4-9&version=NLT",
   "source": "1 Samuel 8",
-  "gsb": "the stories from Judges to Solomon (Stories 46 to 55, 60 and 61)",
+  "gsb": "Story 54, Israel Demands a King (page 109)",
   "tell": [
    "Samuel grew old. He made his sons judges, but they were not like him. They took bribes and were unfair.",
    "So the leaders of Israel came to Samuel and said, “You are old, and your sons are not like you. Give us a king to judge us, like all the other nations have.”",
@@ -1130,7 +1130,7 @@ var STORIES = {
   "read": "1 Samuel 15:17–23",
   "url": "https://www.biblegateway.com/passage/?search=1%20Samuel%2015%3A17-23&version=NLT",
   "source": "1 Samuel 9:1–2; 10:1, 17–24; 15:1–26",
-  "gsb": "the stories from Judges to Solomon (Stories 46 to 55, 60 and 61)",
+  "gsb": "Story 55, Saul Disobeys the Lord (page 110)",
   "tell": [
    "God chose a king for them. His name was Saul. He was tall and handsome, head and shoulders above everyone else. Exactly what a king should look like. But when Samuel gathered the people to show them their new king, Saul could not be found. He was hiding among the baggage.",
    "At first Saul led well. But Saul did not obey God. More than once, when things got hard, he did what he thought best instead of what God said.",
@@ -1148,7 +1148,7 @@ var STORIES = {
   "read": "1 Kings 11:1–6",
   "url": "https://www.biblegateway.com/passage/?search=1%20Kings%2011%3A1-6&version=NLT",
   "source": "1 Kings 3:5–12; 11:1–11",
-  "gsb": "the stories from Judges to Solomon (Stories 46 to 55, 60 and 61)",
+  "gsb": "Stories 60 and 61, Solomon & the Temple of God and The Kingdom Is Divided (pages 121 and 122)",
   "tell": [
    "After Saul came David, a king who loved God, though he made big mistakes too. Then David’s son Solomon became king.",
    "Early on, God appeared to Solomon in a dream and said, “What do you want? Ask, and I will give it to you.” Solomon could have asked for money, or a long life. Instead he said, “Give me an understanding heart, so that I can rule your people well and know right from wrong.”",
