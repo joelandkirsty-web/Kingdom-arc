@@ -592,7 +592,7 @@ var STORIES = {
   "tell": [
    "For hundreds and hundreds of years, God’s people ate the Passover meal every year. They remembered the lamb, and the blood on the door, and how God had rescued them.",
    "Then one day, a man called John the Baptist saw Jesus walking towards him. And John said, “Look! The Lamb of God who takes away the sin of the world!”",
-   "Jesus, a lamb? Jesus was going to be like the Passover lamb. Not to rescue people from Pharaoh, but to rescue people from sin.",
+   "Remember, Jesus is our Passover Lamb. He came not to rescue people from Pharaoh, but to rescue people from sin.",
    "And at Passover time, many years later, Jesus died on a cross. His friends put his body in a tomb.",
    "But on Sunday morning, the tomb was empty. Angels said, “He isn’t here! He is risen from the dead!”",
    "Jesus was alive again. We will hear much more about how Jesus is like the Passover lamb at the end of the year.",
@@ -1103,8 +1103,8 @@ var STORIES = {
     "all": "Speak, your servant is listening."
    }
   ],
-  "ask": "How many times did God call? What did Samuel learn to say?",
-  "listen": "Four. “Speak, your servant is listening.”"
+  "ask": "How many times did God call before Eli understood? What did Samuel learn to say?",
+  "listen": "Three. “Speak, your servant is listening.”"
  },
  "5-7": {
   "read": "1 Samuel 8:4–9",
