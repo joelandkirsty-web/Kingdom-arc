@@ -248,7 +248,7 @@ function isPlaced() { return state.placed === key(); }
 function thisCard() { return CARDS.find(function (c) { return c.yr === state.yr && c.w === state.wk; }); }
 function visible() {
   var yr = state.yr, wk = state.wk, p = isPlaced();
-  return CARDS.filter(function (c) { return c.yr < yr || (c.yr === yr && (c.w < wk || (c.w === wk && p))); });
+  return CARDS.filter(function (c) { return c.yr === yr && (c.w < wk || (c.w === wk && p)); });
 }
 
 function render() {
@@ -413,7 +413,7 @@ function renderPhone() {
     if (st) h.push(readLink(st, "ph-btn ph-btn-line ph-link", "border-color:#1D2B53;box-shadow:0 3px 0 #1D2B53"));
   } else if (state.view === "story") {
     var sn = state.storyStage || (tc ? tc.stage : 1), s = STAGES[sn - 1];
-    var cards = CARDS.filter(function (c) { return c.stage === sn && (c.yr < yr || (c.yr === yr && c.w <= wk)); })
+    var cards = CARDS.filter(function (c) { return c.stage === sn && c.yr === yr && c.w <= wk; })
       .sort(function (a, b) { return a.yr - b.yr || a.w - b.w; });
     h.push(phBackHeader("The whole story"));
     h.push(phTrail(sn));
